@@ -4,7 +4,8 @@ import { RouterProvider } from 'react-router'
 import DashboardLayout from './layouts/DashboardLayout'
 import LandingPageLayout from './layouts/LandingPageLayout'
 import Home from './routes/Home'
-import './style/All.css'
+import DashboardHome from './routes/DashboardHome'
+import './style/Home.css'
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     element: <DashboardLayout />,
     children: [
       {
-        path: '/',
+        path: '/DashboardHome',
         element: <DashboardHome />,
       },
     ],
