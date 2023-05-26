@@ -1,7 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-  return <div>Sociogram Home Page</div>
+  return (
+    <div>
+      <Link to='/ConnectWallet'>login</Link>
+    </div>
+  )
 }
 
 export default Home

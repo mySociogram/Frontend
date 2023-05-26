@@ -5,6 +5,7 @@ import DashboardLayout from './layouts/DashboardLayout'
 import LandingPageLayout from './layouts/LandingPageLayout'
 import Home from './routes/Home'
 import DashboardHome from './routes/DashboardHome'
+import ConnectWallet from './routes/ConnectWallet'
 import './style/Home.css'
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         element: <DashboardHome />,
       },
     ],
+  },
+  {
+    path: '/ConnectWallet',
+    element: <ConnectWallet />,
   },
 ])
 
