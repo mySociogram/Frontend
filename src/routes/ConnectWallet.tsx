@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import '../style/ConnectWallet.css'
 import info from '../assets/info.png'
 import meta from '../assets/meta.png'
@@ -6,17 +6,17 @@ import fantom from '../assets/fantom.png'
 import trust from '../assets/trust.png'
 import coin from '../assets/coin.png'
 import { BiSearchAlt2 } from 'react-icons/bi'
+import { zoomOut } from '../../helpers/gsapAnimations'
 
 const ConnectWallet = () => {
+  const cwRef = useRef(null)
+
+  useEffect(() => {
+    zoomOut(cwRef)
+  })
   return (
-    <section className='p-4 p-md-5'>
-      <header className='text-uppercase'>logo</header>
-      <main className='main-wallet mt-4 p-2 p-md-5'>
-        <article className='text-center art-wallet'>
-          <h3>Sociogram</h3>
-          <p>Everything is about empowering communities to serve you </p>
-        </article>
-        <article className='art-pad'>
+    <>
+        <article ref={cwRef} className='art-pad'>
           <section className='text-center p-3 sec-wallt mt-4'>
             <article className='select-wallet d-flex mt-lg-5'>
               <p>Select your preffered wallet</p>
@@ -63,8 +63,7 @@ const ConnectWallet = () => {
             </article>
           </section>
         </article>
-      </main>
-    </section>
+    </>
   )
 }
 
