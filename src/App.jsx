@@ -17,6 +17,10 @@ const router = createBrowserRouter([
         path: '/',
         element: <Home />,
       },
+      {
+        path: '/ConnectWallet',
+        element: <ConnectWallet />,
+      },
     ],
   },
   {
@@ -28,10 +32,6 @@ const router = createBrowserRouter([
         element: <DashboardHome />,
       },
     ],
-  },
-  {
-    path: '/ConnectWallet',
-    element: <ConnectWallet />,
   },
 ])
 
