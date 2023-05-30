@@ -19,7 +19,7 @@ const ConnectWalletHome = () => {
 
   return (
     <>
-      <article ref={homePage} className='art-pad'>
+      <article ref={homePage} className=''>
         <section className='text-center p-3 sec-wallt mt-4'>
           <article className='select-wallet d-flex mt-lg-5'>
             <p>Login with your wallet </p>
