@@ -1,0 +1,47 @@
+.sec-rec {
+  border: 1px solid red;
+  height: 540px;
+  background: #fbf8ff;
+  margin: 0 auto !important;
+}
+.rec-main {
+  border: 0.5px solid #c6c6c6;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.exit-icon {
+  text-align: end;
+}
+.qrcode {
+  width: 70%;
+}
+.divAdd {
+  justify-content: center;
+}
+.smallAdd-text {
+  font-size: 10px;
+  font-weight: 500;
+}
+.copy-icon {
+  width: 13px;
+  height: 13px;
+}
+@media (min-width: 768px) {
+  .sec-rec {
+    height: 560px;
+  }
+  .rec-main {
+    margin: 0 auto !important;
+    width: 368px;
+  }
+  .smallAdd-text {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-rec {
+    height: 680px;
+  }
+}
