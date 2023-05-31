@@ -3,7 +3,7 @@
   font-size: 28px;
   line-height: 56px;
   color: #6821c3;
-  font-family: "inter";
+  font-family: 'inter';
 }
 .art-wallet p {
   width: 100%;
@@ -12,6 +12,7 @@
   line-height: 24px;
   color: #8d8d8d;
   margin: 12px auto 0 auto;
+  margin-top: -12px;
 }
 .select-wallet {
   justify-content: center;
@@ -29,6 +30,9 @@
   background: #ffffff;
   box-shadow: 0px 8px 12px rgba(14, 0, 32, 0.1);
   border-radius: 8px;
+}
+.art-pad {
+  height: 400px;
 }
 .info-icon {
   width: 18px;
@@ -165,6 +169,7 @@
   .art-wallet p {
     width: 30%;
     font-size: 16px;
+    margin-top: 10px;
   }
   .div-wallt {
     width: 75%;

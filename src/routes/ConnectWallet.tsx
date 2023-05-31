@@ -16,8 +16,8 @@ const ConnectWallet = () => {
   })
   return (
     <>
-        <article ref={cwRef} className='art-pad'>
-          <section className='text-center p-3 sec-wallt mt-4'>
+        <article ref={cwRef} className=''>
+          <section className='text-center p-3 sec-wallt mt-4 art-pad'>
             <article className='select-wallet d-flex mt-lg-5'>
               <p>Select your preffered wallet</p>
               <img src={info} alt='info icon' className='info-icon ms-2 mt-1' />
