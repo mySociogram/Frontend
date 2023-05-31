@@ -1,0 +1,113 @@
+.sf_card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 636px;
+  background: #ffffff;
+  border: 0.5px solid #c6c6c6;
+  border: 0.5px solid red;
+  border-radius: 32px;
+  margin-bottom: 50px;
+}
+
+.sf_card-header {
+  padding: 32px;
+}
+
+.td-section {
+  padding-top: 56px;
+  margin-bottom: 100px;
+  border-top: 1px solid #f1e6ff;
+  padding: 32px;
+  height: auto;
+}
+
+.td-section > p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.details_input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sf_steps-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sf_step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sf_step > p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.sf_step-eclipse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 48px;
+  height: 48px;
+  background: #f1e6ff;
+  border: 1px solid #c6c6c6;
+  border-radius: 500px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.sf-input {
+  width: 100%;
+  background: #fbf8ff;
+  border: 0.5px solid #c6c6c6;
+  border-radius: 4px;
+  padding: 16px 24px;
+  margin-bottom: 32px;
+}
+
+.sf-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.sf-close_icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.sf_btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #6821c3;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FDFBFF;
+  border: none;
+}
