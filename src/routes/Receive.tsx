@@ -7,13 +7,13 @@ import copy from '../assets/copy.png'
 const Receive = () => {
   return (
     <section className='p-4 sec-rec'>
-      <main className='rec-main p-3'>
+      <main className='rec-main p-3 p-lg-4'>
         <div className='exit-icon'>
           <IoMdClose />
         </div>
         <article className='mt-4'>
-          <h4>Receive</h4>
-          <hr />
+          <h4 className='heading-text'>Receive</h4>
+          <hr className='mt-4' />
         </article>
         <section className='mt-5 text-center justify-content-center'>
           <img src={qrcode} alt='qr code' className='qrcode' />
