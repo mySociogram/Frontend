@@ -2,32 +2,32 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { modalEaseInAndOut } from "../../helpers/gsapAnimations";
 import "../style/CustomModal.css";
 
-const CustomModal = ({ children, isOpen, btnRef, setModalVisibility }) => {
-  const modalRef = useRef<any>(null);
+const CustomModal = ({ children, isOpen, btnRef, modalContentRef, closeModal }) => {
 
   useLayoutEffect(() => {
-    modalEaseInAndOut(modalRef, isOpen);
+    modalEaseInAndOut(modalContentRef, isOpen);
   }, [isOpen]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (btnRef.current.contains(event.target)) {
+      if (btnRef.current && btnRef.current.contains(event.target)) {
         return;
-      } else if (modalRef.current && !modalRef.current.contains(event.target)) {
-        setModalVisibility();
-      }
+      } else if (!modalContentRef.current?.contains(event.target)) {
+        closeModal();
+        console.log("yee")
+      }      
     };
 
     document.addEventListener("click", handleClickOutside);
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [modalRef]);
+  }, [modalContentRef]);
 
   return (
     <div className={`${isOpen ? `modal-visible` : `modal-hidden`}`}>
       <div className="modal-wrapper">
-        <div ref={modalRef} className={`modal-content`}>
+        <div className={`modal-content`}>
           {children}
         </div>
       </div>

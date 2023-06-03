@@ -8,11 +8,17 @@
 }
 
 .modal-content {
-  width: 100%;
+  position: relative;
+  width: auto;
+  padding: 30px auto 30px auto;
+}
+
+.modal-content-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px auto;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .modal-visible {
