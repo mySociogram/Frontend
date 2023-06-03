@@ -6,7 +6,6 @@ import fantom from "../assets/fantom.png";
 import trust from "../assets/trust.png";
 import coin from "../assets/coin.png";
 import wallet from "../assets/wallet.png";
-import AuthLayout from "../layouts/LandingPageLayout";
 import { Link } from "react-router-dom";
 import { zoomOut } from "../../helpers/gsapAnimations";
 

@@ -1,0 +1,245 @@
+.sf_card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 636px;
+  background: #ffffff;
+  border: 0.5px solid #c6c6c6;
+  border-radius: 32px;
+  margin-bottom: 50px;
+  margin-top: 250px;
+}
+
+.sf_card-header {
+  padding: 32px;
+}
+
+.td-section {
+  padding-top: 56px;
+  margin-bottom: 100px;
+  border-top: 1px solid #f1e6ff;
+  padding: 32px;
+  height: auto;
+}
+
+.td-section,
+.ts-section > p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.details_input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sf_steps-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.sf_step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.active > p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.active > .sf_step-eclipse {
+  background: #f1e6ff;
+}
+
+.sf_step-eclipse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  width: 48px;
+  height: 48px;
+  background: #FBF8FF;
+  border: 1px solid #c6c6c6;
+  border-radius: 500px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.sf-input {
+  width: 100%;
+  background: #fbf8ff;
+  border: 0.5px solid #c6c6c6;
+  border-radius: 4px;
+  padding: 5px 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.sf-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.sf-close_icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.sf_btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+}
+
+.sf_btn-pry {
+  background: #6821c3;
+  color: #fdfbff;
+}
+
+.sf_btn-sec {
+  background: transparent;
+  color: #6821c3;
+}
+
+/* Transaction Summmary */
+.ts-section {
+  padding-top: 40px;
+  border-top: 1px solid #f1e6ff;
+  height: auto;
+  padding: 32px;
+}
+
+.ts_data-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ts_data-flex > p:nth-of-type(1) {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: #575757;
+  margin-right: 10px;
+}
+.ts_data-flex > p:nth-of-type(2) {
+  text-align: right;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+  color: #08070a;
+  line-break: anywhere;
+}
+.ts-btn {
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .sf_card {
+    margin-bottom: 50px;
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sf_card {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 50px;
+    margin-top: 150px;
+  }
+
+  .active > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ts_data-flex > p:nth-of-type(1) {
+    font-size: 16px;
+  }
+  .ts_data-flex > p:nth-of-type(2) {
+    font-size: 15px;
+  }
+  .sf_step-eclipse {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sf_card-header {
+    padding: 16px;
+  }
+  .td-section {
+    padding-top: 30px;
+    margin-bottom: 70px;
+    padding: 16px;
+  }
+  .ts-section {
+    padding-top: 20px;
+    padding: 16px;
+  }
+  
+  .td-section,
+  .ts-section > p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+.sf-close_icon {
+  margin-bottom: 20px;
+}
+
+}
+
+@media screen and (max-width: 450px) {
+  .sf_card {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+  }
+  /* .ts_data-flex {
+    display: block;
+  } */
+  .active > p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .sf_step-eclipse {
+    width: 32px;
+    height: 32px;
+    padding: 7px;
+    font-size: 14px;
+  }
+  .sf_btn {
+    padding: 7px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
