@@ -1,0 +1,86 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-right: 10px;
+    background-color: white;
+    padding-top: 20px;
+
+}
+
+.sidebar1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-top: 0px;
+    width: 60%;
+    left: 50%; /* Move the child div to the center horizontally */
+    transform: translateX(-30%); 
+   
+}
+
+.home-option{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: inherit;
+    transform: translateX(-10%); 
+    margin-bottom: 20px;
+}
+.home-option > small{
+    font-size: px;
+}
+.home-option > img{
+    margin-right: 10px;
+    height: 13px;
+
+}
+.home-option > h6{
+    font-size: 16px;
+
+}
+.sidebar2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    margin-top: 30px;
+    width: 50%;
+    left: 50%; /* Move the child div to the center horizontally */
+    transform: translateX(-40%);
+    top: 40%;
+}
+.activity{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: inherit;
+    transform: translateX(-10%); 
+    margin-bottom: 20px;
+    position: fixed;
+}
+.activity-grp{
+    position: absolute;
+    top: 250%;
+
+}
+.activity-option{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: inherit;
+    transform: translateX(-10%); 
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-left: 20%;
+  
+
+}
+.activity-option > img{
+    margin-right: 10px;
+    height: 13px;
+
+}
