@@ -10,6 +10,8 @@ import ConnectWallet from './routes/ConnectWallet'
 import './style/Home.css'
 import Receive from './routes/Receive'
 import Buy from './routes/Buy'
+import Swap from './routes/Swap'
+import ModalTest from './routes/ModalTest'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,14 @@ const router = createBrowserRouter([
   {
     path: '/Buy',
     element: <Buy />,
+  },
+  {
+    path: '/Swap',
+    element: <Swap />,
+  },
+  {
+    path: '/ModalTest',
+    element: <ModalTest />,
   },
 ])
 
