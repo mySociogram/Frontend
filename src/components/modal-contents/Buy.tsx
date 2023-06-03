@@ -1,15 +1,15 @@
 import React from 'react'
-import '../style/Buy.css'
+import '../../style/Buy.css'
 import { IoMdClose } from 'react-icons/io'
-import ramp from '../assets/ramp.png'
+import ramp from '../../assets/ramp.png'
 import { BsArrowRight } from 'react-icons/bs'
 
-const Buy = () => {
+const Buy = ({ closeSelf, modalContentRef }) => {
   return (
     <section className='sec-buy p-4'>
-      <main className='main-buy p-3 p-lg-4'>
+      <main className='main-buy p-3 p-lg-4' ref={modalContentRef}>
         <div className='exit-icon'>
-          <IoMdClose />
+          <IoMdClose onClick={closeSelf} />
         </div>
         <article className='mt-4'>
           <h4 className='heading-text'>Buy</h4>

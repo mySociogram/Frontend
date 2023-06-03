@@ -1,12 +1,14 @@
-import React, { useRef, useState } from "react";
-import CustomModal from "../components/CustomModal";
-import SendFlow from "../components/modal-contents/SendFlow";
+import React, { useRef, useState } from 'react'
+import CustomModal from '../components/CustomModal'
+import SendFlow from '../components/modal-contents/SendFlow'
+import Buy from '../components/modal-contents/Buy'
+import Receive from '../components/modal-contents/Receive'
 
 const ModalTest = () => {
-  const [sendModal, setSendModal] = useState(false);
+  const [sendModal, setSendModal] = useState(false)
 
-  const openModalBtn = useRef<HTMLButtonElement>(null);
-  const modalContentRef = useRef<HTMLDivElement>(null);
+  const openModalBtn = useRef<HTMLButtonElement>(null)
+  const modalContentRef = useRef<HTMLDivElement>(null)
 
   return (
     <div>
@@ -24,9 +26,17 @@ const ModalTest = () => {
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
         />
+        {/* <Buy
+          modalContentRef={modalContentRef}
+          closeSelf={() => setSendModal(false)}
+        /> */}
+        {/* <Receive
+          modalContentRef={modalContentRef}
+          closeSelf={() => setSendModal(false)}
+        /> */}
       </CustomModal>
     </div>
-  );
-};
+  )
+}
 
-export default ModalTest;
+export default ModalTest

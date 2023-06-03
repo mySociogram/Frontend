@@ -1,15 +1,15 @@
 import React from 'react'
-import '../style/Receive.css'
+import '../../style/Receive.css'
 import { IoMdClose } from 'react-icons/io'
-import qrcode from '../assets/qrcode.png'
-import copy from '../assets/copy.png'
+import qrcode from '../../assets/qrcode.png'
+import copy from '../../assets/copy.png'
 
-const Receive = () => {
+const Receive = ({ closeSelf, modalContentRef }) => {
   return (
-    <section className='p-4 sec-rec'>
+    <section className='p-4 sec-rec' ref={modalContentRef}>
       <main className='rec-main p-3 p-lg-4'>
         <div className='exit-icon'>
-          <IoMdClose />
+          <IoMdClose onClick={closeSelf} />
         </div>
         <article className='mt-4'>
           <h4 className='heading-text'>Receive</h4>

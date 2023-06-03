@@ -7,7 +7,7 @@ const ConnectWalletLayout = () => {
   return (
     <section className='p-4 p-md-5'>
       <header className='text-uppercase'>
-        <Link to='/TransactionDetails'>logo</Link>
+        <Link to='/ModalTest'>logo</Link>
       </header>
       <main className='main-wallet mt-4 p-2 p-md-5'>
         <article className='text-center art-wallet'>
