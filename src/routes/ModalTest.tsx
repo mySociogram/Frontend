@@ -26,14 +26,14 @@ const ModalTest = () => {
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
         />
-        {/* <Buy
+        <Buy
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
-        /> */}
-        {/* <Receive
+        />
+        <Receive
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
-        /> */}
+        />
       </CustomModal>
     </div>
   )
