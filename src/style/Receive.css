@@ -30,7 +30,6 @@
 }
 @media (min-width: 768px) {
   .sec-rec {
-    border: 1px solid red;
     height: 580px;
   }
   .rec-main {

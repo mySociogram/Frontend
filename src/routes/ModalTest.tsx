@@ -3,6 +3,7 @@ import CustomModal from '../components/CustomModal'
 import SendFlow from '../components/modal-contents/SendFlow'
 import Buy from '../components/modal-contents/Buy'
 import Receive from '../components/modal-contents/Receive'
+import Swap from '../components/modal-contents/Swap'
 
 const ModalTest = () => {
   const [sendModal, setSendModal] = useState(false)
@@ -22,15 +23,19 @@ const ModalTest = () => {
         modalContentRef={modalContentRef}
         closeModal={() => setSendModal(false)}
       >
-        <SendFlow
+        {/* <SendFlow
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
-        />
-        <Buy
+        /> */}
+        {/* <Buy
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
-        />
-        <Receive
+        /> */}
+        {/* <Receive
+          modalContentRef={modalContentRef}
+          closeSelf={() => setSendModal(false)}
+        /> */}
+        <Swap
           modalContentRef={modalContentRef}
           closeSelf={() => setSendModal(false)}
         />
