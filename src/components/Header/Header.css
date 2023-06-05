@@ -1,0 +1,107 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    padding-inline: 5%;
+
+}
+
+.title > h2{
+    padding-left: 0px;
+    color: #6821C3;
+}
+.right-side{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+ 
+}
+.search-container{
+    
+    display: inline-block;
+    width: 70%;
+  
+    position: relative; 
+    display: flex;
+    align-items: center;
+
+} 
+.search-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    right: "";
+    padding-left: 5px;
+
+    
+}
+.drop-down{
+    width: 27%;
+}
+.drop-down > ul >li{
+    margin-bottom: 3px;
+}
+
+.drop-down-button{
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid gray;
+    position: relative;
+
+}
+.dropdown-menu{
+    margin-top: 60px;
+    
+}
+.drop-down-button > small{
+
+}
+
+@media (max-width: 1100px) {
+    .drop-down{
+        width: 30%;
+    }
+    .right-side{
+        width: 70%;
+    }
+}
+@media (max-width: 920px) {
+    
+    .drop-down{
+        width: 30%;
+    }
+    .drop-down-button > img{
+        height: 5px;
+        
+    }
+    .drop-down-button > small{
+        font-size: 11px;
+    }
+    .title > h3{
+        padding: 0;
+    }
+    .right-side{
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+    }
+
+}
+@media (max-width: 770px) {
+    .header{
+        padding-inline: 20px;
+
+    }
+    .right-side{
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+    }
+}

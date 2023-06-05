@@ -1,6 +1,12 @@
-// import React from "react";
+
+import React from 'react'
+import { Outlet } from 'react-router'
+import Footer from '../components/Footer'
+import Header from '../components/Header/Header'
+=======
 // import "../style/ConnectWallet.css";
 // import { Outlet } from "react-router";
+
 
 // const LandingPageLayout = () => {
 //   return (

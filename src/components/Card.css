@@ -1,0 +1,60 @@
+.display-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+    color: gray;
+    width: 100%;
+    padding: 20px;
+ 
+
+
+}
+.card > img{
+    margin-right: 10px;
+    
+
+}
+.display-picture{
+    width: 37px;
+    margin-right: 10px;
+}
+
+.card-details > h6 {
+    margin-bottom: -2px;
+
+}    
+.card-details > small {
+    font-size: 11px;    
+}
+.card-details > p {
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 13.5px;
+    line-height: 18px;
+}
+.actions-column{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.dnc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+.dnc > small{
+    font-size: 12.5px;
+}
+.icons-reaction{
+    width: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mainbar2-details > h5{
+    text-align: start;
+    margin: 10px;
+    font-weight: 300;
+}
