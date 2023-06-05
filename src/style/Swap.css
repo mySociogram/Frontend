@@ -84,5 +84,6 @@
 @media (min-width: 1024px) {
   .swap-firstMain {
     margin-top: 2px !important;
+    width: 500px;
   }
 }
