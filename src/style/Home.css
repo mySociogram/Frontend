@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *,
 ::after,
 ::before {
@@ -11,6 +13,7 @@ body {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+
   box-sizing: border-box;
 
   overflow-y:scroll;
@@ -121,4 +124,9 @@ td > span{
 }
 .tbody{
   margin-bottom: 20px;
+
+}
+button {
+  outline: none;
+
 }

@@ -1,0 +1,46 @@
+.modal-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: #6d696950;
+}
+
+.modal-content {
+  position: relative;
+  width: auto;
+  padding: 30px auto 30px auto;
+}
+
+.modal-content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.modal-visible {
+    display: block;
+}
+
+.modal-hidden {
+    display: none;
+}
+
+.modal-scrollbar::-webkit-scrollbar-thumb {
+  background: #6821c3;
+  border-radius: 10px;
+}
+
+/* width */
+.modal-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.modal-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}

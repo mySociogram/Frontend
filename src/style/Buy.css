@@ -1,0 +1,69 @@
+.sec-buy {
+  /* background: #fbf8ff; */
+  height: 540px;
+}
+.main-buy {
+  border: 0.5px solid #c6c6c6;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 22px;
+}
+.exit-icon {
+  text-align: end;
+  cursor: pointer;
+}
+.ramp {
+  width: 32px;
+  height: 32px;
+}
+.main-prov {
+  justify-content: space-between;
+}
+.buy-textt {
+  font-size: 13px;
+  font-weight: 600;
+}
+.com-text {
+  color: #6821c3;
+}
+@media (min-width: 768px) {
+  .main-buy {
+    margin: 0 auto !important;
+    width: 368px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-buy {
+    height: 700px;
+  }
+  .main-buy {
+    border-radius: 32px;
+    width: 500px;
+  }
+  .exit-icon,
+  .arr-right {
+    font-size: 20px;
+  }
+  .heading-text {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .buy-textt {
+    font-size: 16px;
+  }
+  .ramp {
+    width: 40px;
+    height: 40px;
+  }
+  .com-text {
+    font-weight: 400;
+    font-size: 24px;
+  }
+  .ramp-text {
+    margin-top: 2px !important;
+    margin-left: 12px !important;
+    font-weight: 400;
+    font-size: 24px;
+  }
+}

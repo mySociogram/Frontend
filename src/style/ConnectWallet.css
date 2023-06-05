@@ -1,0 +1,177 @@
+.art-wallet h3 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 56px;
+  color: #6821c3;
+  font-family: 'inter';
+}
+.art-wallet p {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8d8d8d;
+  margin: 12px auto 0 auto;
+  margin-top: -12px;
+}
+.select-wallet {
+  justify-content: center;
+}
+.select-wallet p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 24px;
+  color: #08070a;
+}
+.sec-wallt {
+  max-width: 403px;
+  height: 480px;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 8px 12px rgba(14, 0, 32, 0.1);
+  border-radius: 8px;
+}
+.art-pad {
+  height: 400px;
+}
+.info-icon {
+  width: 18px;
+  height: 16px;
+}
+.tok-icon {
+  width: 24px;
+  height: 20px;
+  margin-top: 3px;
+}
+.fantom-icon {
+  margin-left: -1rem;
+}
+.trust-icon {
+  margin-left: -1.8rem;
+}
+.coin-icon {
+  margin-left: -0.2rem;
+}
+.div-wallt {
+  border: 1px solid #8d8d8d;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 8px 12px rgba(14, 0, 32, 0.1);
+  border-radius: 8px;
+  margin-top: -1.5rem;
+  height: 46px;
+  color: #8d8d8d;
+}
+.div-wallt p {
+  font-size: 12px;
+  color: #8d8d8d;
+}
+.search-icon {
+  margin-top: 12px;
+}
+
+/* HOME Page */
+.cw-icons-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cw-icons-display > img {
+  margin-right: 2px;
+  width: 30px;
+  height: 30px;
+}
+
+.select_mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select_mode-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  width: 100%;
+  max-width: 245px;
+  /* height: 130px; */
+  border: 1px solid #cdcdcd;
+  border-radius: 8px;
+  margin-top: 32px;
+  text-decoration: none !important;
+}
+
+.select_mode-card:hover {
+  border: 2px solid #6821c3;
+}
+
+.select_mode-card > p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6821c3;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .select-wallet p {
+    font-size: 15px;
+  }
+  .main-wallet {
+    margin-top: -1rem !important;
+  }
+  .tok-icon {
+    width: 28px;
+    height: 25px;
+    margin-top: -1px;
+  }
+  .fantom-icon {
+    margin-left: -1.4rem;
+  }
+  .trust-icon {
+    margin-left: -2.4rem;
+  }
+  .coin-icon {
+    margin-left: -0.5rem;
+  }
+  .info-icon {
+    width: 20px;
+    height: 18px;
+  }
+  .div-wallt {
+    width: 75%;
+    margin: 0 auto !important;
+    margin-top: -1.5rem !important;
+  }
+  .art-wallet p {
+    width: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .art-wallet h3 {
+    font-weight: 700;
+    font-size: 48px;
+  }
+  .sec-wallt {
+    width: 100%;
+    max-width: 403px;
+    height: 480px;
+    margin: 0 auto;
+  }
+  .search-icon {
+    font-size: 20px;
+  }
+  .art-wallet p {
+    width: 30%;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .div-wallt {
+    width: 75%;
+  }
+}
