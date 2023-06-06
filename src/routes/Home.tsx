@@ -1,46 +1,45 @@
 import React from 'react'
-import "../style/Home.css"
+import '../style/Home.css'
 import '../components/Sidebar/Sidebar.css'
-import { TbGridDots } from "react-icons/tb";
-import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
+import { TbGridDots } from 'react-icons/tb'
+import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import './Mainbar.css'
-import Card from '../components/Card';
-import data from '../components/data';
-import Token from '../components/Token';
-import Topmarket from '../components/Topmarket';
-import Sidebar from '../components/Sidebar/Sidebar';
-import tokendata from '../components/tokendata';
-import market from '../components/market';
-
+import Card from '../components/Card'
+import data from '../components/data'
+import Token from '../components/Token'
+import Topmarket from '../components/Topmarket'
+import Sidebar from '../components/Sidebar/Sidebar'
+import tokendata from '../components/tokendata'
+import market from '../components/market'
 
 const Home = () => {
-  const cards = data.map(item => {
+  const cards = data.map((item) => {
     return (
-        <Card
-          key={item.id}
-          displayImg={item.displayImg}
-          name={item.name}
-          username={item.username}
-          comment={item.comment}
-          coverImg={item.coverImg}
-          tokenName={item.token.name}
-          tokenImage={item.token.image}
-          tokenNumber={item.token.number}
-          loveIcon={item.loveIcon.image}
-          loveNumber={item.loveIcon.number}
-          commentIcon={item.commentIcon.icon}
-          commentNumber={item.commentIcon.number}
-          graphIcon={item.graphIcon.icon}
-          graphNumber={item.graphIcon.number}
-          flagImg={item.flagImg}
-          menuButton={item.menuButton}
-        />
+      <Card
+        key={item.id}
+        displayImg={item.displayImg}
+        name={item.name}
+        username={item.username}
+        comment={item.comment}
+        coverImg={item.coverImg}
+        tokenName={item.token.name}
+        tokenImage={item.token.image}
+        tokenNumber={item.token.number}
+        loveIcon={item.loveIcon.image}
+        loveNumber={item.loveIcon.number}
+        commentIcon={item.commentIcon.icon}
+        commentNumber={item.commentIcon.number}
+        graphIcon={item.graphIcon.icon}
+        graphNumber={item.graphIcon.number}
+        flagImg={item.flagImg}
+        menuButton={item.menuButton}
+      />
     )
-  })  
-  
-  const token = tokendata.map(item => {
-    return(
-      <Token 
+  })
+
+  const token = tokendata.map((item) => {
+    return (
+      <Token
         key={item.id}
         name={item.lineone.name}
         dot={item.lineone.dot}
@@ -52,19 +51,18 @@ const Home = () => {
       />
     )
   })
-  
-  const marketdata = market.map(item => {
-    return(
-      <Topmarket 
+
+  const marketdata = market.map((item) => {
+    return (
+      <Topmarket
         key={item.id}
-        lovenumber ={item.number}
-        coinImg ={item.coinImg}
-        name = {item.name}
-        initials = {item.initials}
-        amount = {item.amount}
-        arrow = {item.arrow}
-        percentage = {item.percentage}
-        
+        lovenumber={item.number}
+        coinImg={item.coinImg}
+        name={item.name}
+        initials={item.initials}
+        amount={item.amount}
+        arrow={item.arrow}
+        percentage={item.percentage}
       />
     )
   })
@@ -73,24 +71,23 @@ const Home = () => {
     <div className='home'>
       <Sidebar />
       <div className='mainbar'>
-        <div className='mainbar1'>
-          {cards}
-        </div>
+        <div className='mainbar1'>{cards}</div>
         <div className='mainbar2'>
           <div className='mainbar2-card'>
             <div className='mainbar2-details'>
-              <h5 style={{marginLeft:'6%'}}>Popular token</h5>
+              <h5 style={{ marginLeft: '6%' }}>Popular token</h5>
               {token}
               <small>
-                View trend 
-                <img src='./img/Vect.png' style={{width:'3%', marginLeft: '5px'}}/>
+                View trend
+                <img
+                  src='./img/Vect.png'
+                  style={{ width: '3%', marginLeft: '5px' }}
+                />
               </small>
-
             </div>
-            
           </div>
-          <div className='mainbar-market' >
-            <h5 style={{fontWeight:300}}>Top market</h5>
+          <div className='mainbar-market'>
+            <h5 style={{ fontWeight: 300 }}>Top market</h5>
             <table>
               <thead>
                 <tr>
@@ -100,23 +97,15 @@ const Home = () => {
                   <th>24H %</th>
                 </tr>
               </thead>
-
-                <div style={{marginBottom:'15px'}}></div>
-                {marketdata}
-                <div style={{marginBottom:'15px'}}></div>
-                
-              
-
+              <div style={{ marginBottom: '15px' }}></div>
+              {marketdata}
+              <div style={{ marginBottom: '15px' }}></div>
             </table>
           </div>
         </div>
-
       </div>
-
     </div>
   )
-  
-
 }
 
 export default Home
