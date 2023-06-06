@@ -1,3 +1,16 @@
-.sidebar {
-  border: 1px solid red;
+@media (min-width: 1024px) {
+  .sidebar {
+    border: 1px solid white;
+  }
+  .Link-sideText {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #373e43;
+  }
+  .side-icons {
+    width: 19.5px;
+    height: 19.5px;
+  }
 }

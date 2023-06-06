@@ -9,7 +9,7 @@ import Home from './routes/Home'
 import ConnectWallet from './routes/ConnectWallet'
 import './style/Home.css'
 import ModalTest from './routes/ModalTest'
-import DashboardPortfolio from './routes/DashboardPortfolio'
+import DashboardWallet from './routes/DashboardWallet'
 
 const router = createBrowserRouter([
   // {
@@ -30,13 +30,13 @@ const router = createBrowserRouter([
     path: '/',
     element: <DashboardLayout />,
     children: [
-      // {
-      //   path: '/',
-      //   element: <Home />,
-      // },
       {
-        path: '/',
-        element: <DashboardPortfolio />,
+        path: '/Home',
+        element: <Home />,
+      },
+      {
+        path: '/DashboardWallet',
+        element: <DashboardWallet />,
       },
     ],
   },
