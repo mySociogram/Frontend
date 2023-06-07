@@ -1,0 +1,37 @@
+@media (min-width: 1024px) {
+  .dashboard-wallet {
+    border: 1px solid red;
+    width: 1131px;
+  }
+  .dash-header {
+    border: 1px solid blue;
+    justify-content: space-between;
+  }
+  .dash-titleIntro h3 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .dash-titleIntro p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .dash-titleIntro span,
+  .dashWallet-icons {
+    color: #6821c3;
+  }
+  .dashWallet-icons {
+    border: 0.5px solid #c6c6c6;
+    background: #fdfbff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 22px;
+  }
+  .dash-textt {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

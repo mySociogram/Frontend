@@ -27,14 +27,14 @@ const SideBar = () => {
           <AiOutlineHome
             className='side-icons'
             style={{
-              color: location.pathname === '/Home' ? '#6821C3' : 'black',
+              color: location.pathname === '/' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/Home'
+            to='/'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/Home' ? '#6821C3' : 'black',
+              color: location.pathname === '/' ? '#6821C3' : 'black',
             }}
           >
             <p>Home</p>
