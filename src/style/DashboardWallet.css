@@ -4,7 +4,6 @@
     width: 1131px;
   }
   .dash-header {
-    border: 1px solid blue;
     justify-content: space-between;
   }
   .dash-titleIntro h3 {
@@ -12,7 +11,8 @@
     font-size: 48px;
     line-height: 56px;
   }
-  .dash-titleIntro p {
+  .dash-titleIntro p,
+  .dash-divTwo p {
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
@@ -33,5 +33,35 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
+  }
+  .dash-graph {
+    border: 1px solid blue;
+  }
+  .dash-divTwo {
+    justify-content: space-between;
+  }
+  .dash-dropDown {
+    border: 0.5px solid #c6c6c6;
+    background: #f9f4ff;
+    border-radius: 5px;
+    width: 119px;
+    height: 40px;
+    text-align: center;
+  }
+  .dashWallet-buttn {
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .dashWallet-ul {
+    background: #f9f4ff;
+    margin-left: -1rem !important;
+  }
+  .lineChart {
+    color: #6821c3 !important;
+  }
+  .dashWallet-graph {
+    margin-left: -16px;
   }
 }

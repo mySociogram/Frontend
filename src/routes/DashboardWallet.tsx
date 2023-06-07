@@ -2,9 +2,10 @@ import React from 'react'
 import '../style/DashboardWallet.css'
 import swap from '../assets/swap.png'
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai'
-import { BsArrowDownLeft } from 'react-icons/bs'
+import { BsArrowDownLeft, BsArrowUpRight } from 'react-icons/bs'
 import { IoMdAdd } from 'react-icons/io'
 import { IoIosSwap } from 'react-icons/io'
+import Graph from '../components/Graph'
 
 const DashboardWallet = () => {
   return (
@@ -17,7 +18,7 @@ const DashboardWallet = () => {
             last visit.
           </p>
         </article>
-        <article className='border border-danger d-flex'>
+        <article className='d-flex'>
           <div>
             <div className='dashWallet-icons text-center mt-lg-3'>
               <AiOutlineArrowUp className='mt-lg-2' />
@@ -51,6 +52,76 @@ const DashboardWallet = () => {
           </div>
         </article>
       </header>
+      <main className='mt-lg-4 border border-danger d-flex'>
+        <section className='dash-graph p-lg-3'>
+          <div className='d-flex dash-divTwo'>
+            <p className='mt-lg-2'>Portfolio History</p>
+            {/* dropdown section here */}
+            <div className='dropdown dash-dropDown mt-lg-1'>
+              <button
+                className='btn dropdown-toggle dashWallet-buttn'
+                type='button'
+                data-bs-toggle='dropdown'
+                aria-expanded='false'
+              >
+                30 Days
+              </button>
+              <ul className='dropdown-menu dashWallet-ul mt-lg-1'>
+                <li>
+                  <a className='dropdown-item' href='#'>
+                    9 Days
+                  </a>
+                </li>
+                <li>
+                  <a className='dropdown-item' href='#'>
+                    60 Days
+                  </a>
+                </li>
+                <li>
+                  <a className='dropdown-item' href='#'>
+                    90 Days
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <Graph />
+        </section>
+        <section>
+          <article className='border border-info'>
+            <section>
+              <p>Total Portfolio</p>
+              <div>
+                <BsArrowUpRight />
+                <p>5%</p>
+              </div>
+            </section>
+            <div>
+              <p>$199.30</p>
+            </div>
+          </article>
+          <article className='border border-info'>
+            <header>Assets</header>
+            <main>
+              <article>
+                <p>DNC</p>
+                <p>50,000.00</p>
+              </article>
+              <div>
+                <p>$190.30</p>
+              </div>
+              <hr />
+              <article>
+                <p>USDT</p>
+                <p>9.00</p>
+              </article>
+              <div>
+                <p>$9.00</p>
+              </div>
+            </main>
+          </article>
+        </section>
+      </main>
     </section>
   )
 }
