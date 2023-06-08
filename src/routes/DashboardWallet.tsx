@@ -54,7 +54,7 @@ const DashboardWallet = () => {
       </header>
       <main className='mt-lg-4 border border-danger d-flex'>
         <section className='dash-graph p-lg-3'>
-          <div className='d-flex dash-divTwo'>
+          <div className='d-flex dash-divTwo mt-lg-3'>
             <p className='mt-lg-2'>Portfolio History</p>
             {/* dropdown section here */}
             <div className='dropdown dash-dropDown mt-lg-1'>
@@ -88,8 +88,8 @@ const DashboardWallet = () => {
           <Graph />
         </section>
         <section>
-          <article className='border border-info'>
-            <section>
+          <article className='border border-danger'>
+            <section className='d-flex'>
               <p>Total Portfolio</p>
               <div>
                 <BsArrowUpRight />

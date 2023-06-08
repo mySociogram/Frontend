@@ -62,15 +62,15 @@ const SideBar = () => {
             className='side-icons'
             style={{
               color:
-                location.pathname === '/DashboardWallet' ? '#6821C3' : 'black',
+                location.pathname === '/dashboardWallet' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/DashboardWallet'
+            to='/dashboardWallet'
             className='Link-sideText ms-lg-2'
             style={{
               color:
-                location.pathname === '/DashboardWallet' ? '#6821C3' : 'black',
+                location.pathname === '/dashboardWallet' ? '#6821C3' : 'black',
             }}
           >
             <p>Wallet</p>

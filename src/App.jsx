@@ -36,11 +36,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+
         path: '/community',
         element: <Community />,
       },
       {
-        path: '/DashboardWallet',
+        path: '/dashboardWallet',
         element: <DashboardWallet />,
       },
     ],
