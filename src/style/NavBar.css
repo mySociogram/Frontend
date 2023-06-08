@@ -1,14 +1,16 @@
 @media (min-width: 1024px) {
-  .dash-layout {
-    border: 1px solid red;
-    background: #f5f5f5;
-    height: 900px !important;
-  }
   .nav-header {
     background: #ffffff;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     border: 1px solid #ffffff;
-    height: 96px;
+    max-height: 96px;
+    height: 100%;
+    padding: 32px 98px;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
   }
   .nav-header h3 {
     font-weight: 700;
@@ -19,35 +21,45 @@
   }
   .nav-firstSection {
     border: 1px solid #8d8d8d;
-    border-radius: 10px;
-    width: 450px;
-    height: 48px;
-    justify-content: center;
-    margin-top: -22px;
+    border-radius: 8px;
+    min-width: 544px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
   }
   .nav-searchIcon {
     color: #8d8d8d;
     font-size: 22px;
     margin-top: 12px;
   }
-  .nav-firstSection p {
-    font-weight: 400;
+  .nav-firstSection input {
+    padding: 0;
+    border: none;
     font-size: 16px;
     line-height: 24px;
     color: #8d8d8d;
+    width: 100%;
+    margin-left: 8px;
   }
   .nav-secondsec {
     border: 1px solid #8d8d8d;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    border-radius: 10px;
-    width: 190px;
-    height: 48px;
-    margin-top: -22px;
+    border-radius: 8px;
+    min-width: 190px;
+    width: 100%;
+    padding: 8px;
+  }
+  .nav-secondsec > p {
+    margin-bottom: 0;
   }
   .nav-secondsec img {
-    margin-top: 6px;
-    width: 34px;
-    height: 34px;
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
   }
   .nav-arrow {
     font-size: 30px;

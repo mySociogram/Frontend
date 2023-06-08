@@ -2,6 +2,7 @@ import React from 'react'
 import { BiSearchAlt2 } from 'react-icons/bi'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import avatar from '../assets/avatar.png'
+import "../style/NavBar.css"
 
 const NavBar = () => {
   return (
@@ -10,16 +11,14 @@ const NavBar = () => {
         <h3>Sociogram</h3>
       </div>
       <main className='d-flex nav-firstMain'>
-        <section className='nav-firstSection d-flex'>
-          <BiSearchAlt2 className='nav-searchIcon' />
-          <p className='mt-lg-2 ms-lg-2'>
-            Search for people, communities, tokens, messages etc
-          </p>
+        <section className='nav-firstSection'>
+          <BiSearchAlt2 />
+          <input type="search" placeholder='Search for people, communities, tokens, messages etc' />
         </section>
-        <section className='nav-secondsec d-flex ms-lg-5'>
+        <section className='nav-secondsec ms-lg-5'>
           <img src={avatar} alt='avatar'/>
-          <p className='ms-lg-2 mt-lg-2'>0xhDc2sj...w5e</p>
-          <RiArrowDropDownLine className='nav-arrow ms-lg-2 mt-lg-2'/>
+          <p className=''>0xhDc2sj...w5e</p>
+          <RiArrowDropDownLine className='nav-arrow '/>
         </section>
       </main>
     </header>
