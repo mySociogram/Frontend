@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/DashboardWallet',
+        path: '/dashboardWallet',
         element: <DashboardWallet />,
       },
     ],

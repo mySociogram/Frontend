@@ -35,7 +35,9 @@
     line-height: 24px;
   }
   .dash-graph {
-    border: 1px solid blue;
+    background: #fdfbff;
+    border: 0.5px solid #c6c6c6;
+    border-radius: 8px;
   }
   .dash-divTwo {
     justify-content: space-between;
