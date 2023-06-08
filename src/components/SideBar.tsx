@@ -44,14 +44,14 @@ const SideBar = () => {
           <BsFillPeopleFill
             className='side-icons'
             style={{
-              color: location.pathname === '/Community' ? '#6821C3' : 'black',
+              color: location.pathname === '/community' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/Community'
+            to='/community'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/Community' ? '#6821C3' : 'black',
+              color: location.pathname === '/community' ? '#6821C3' : 'black',
             }}
           >
             <p>Community</p>
@@ -152,7 +152,7 @@ const SideBar = () => {
             )}
           </div>
         </article>
-        <section className='mt-lg-2'>
+        <section className='mt-lg-2 activity_grp-content'>
           {show ? (
             <section>
               <div className='d-flex'>

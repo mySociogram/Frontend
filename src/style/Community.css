@@ -1,0 +1,157 @@
+.community_page-wrapper {
+  padding: 48px 24px;
+}
+
+.community_sub-titles {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #08070a;
+  margin-bottom: 24px;
+}
+
+.suggestion_cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.suggestion_cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.suggestion_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  min-width: 190px;
+  width: 100%;
+  background: #ffffff;
+  border: 0.5px solid #c6c6c6;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.suggestion_card-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.suggestion_card-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #08070a;
+  margin-bottom: 3px;
+}
+
+.suggestion_card-info {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #5f5f5f;
+}
+
+/* Featured Section */
+
+.featured-section {
+  margin-top: 48px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px 20px;
+}
+
+.featured_cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.featured_cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.featured_card {
+  margin-right: 16px;
+}
+
+.featured_card-video {
+  width: 100%;
+  min-width: 231px;
+  height: 160px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(342f26c284.jpg);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.featured_card-name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #08070a;
+}
+
+
+
+/* My communities Styles */
+
+.my_communities-section {
+  margin-top: 48px;
+}
+
+.my_communities-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.my_community-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  /* min-width: 496px; */
+  /* width: 100%; */
+  background: #ffffff;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.my_community-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.my_community-info-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my_community-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.my_community-info > p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #5f5f5f;
+}
+
+.my_community-info > img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}

@@ -5,7 +5,7 @@
     padding-right: 10px;
     background-color: white;
     padding-top: 20px;
-
+    width: 100%;
 }
 
 .sidebar1{
@@ -65,7 +65,9 @@
 .activity-grp{
     position: absolute;
     top: 250%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .activity-option{
     display: flex;

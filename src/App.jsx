@@ -10,6 +10,7 @@ import ConnectWallet from './routes/ConnectWallet'
 import './style/Home.css'
 import ModalTest from './routes/ModalTest'
 import DashboardWallet from './routes/DashboardWallet'
+import Community from './routes/Community'
 
 const router = createBrowserRouter([
   // {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/community',
+        element: <Community />,
       },
       {
         path: '/DashboardWallet',
