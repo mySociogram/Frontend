@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   //       element: <ConnectWalletHome />,
   //     },
   //     {
-  //       path: '/ConnectWallet',
+  //       path: '/connectWallet',
   //       element: <ConnectWallet />,
   //     },
   //   ],

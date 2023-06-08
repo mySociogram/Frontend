@@ -1,7 +1,7 @@
 @media (min-width: 1024px) {
   .dashboard-wallet {
-    border: 1px solid red;
-    width: 1131px;
+    /* border: 1px solid red; */
+    /* width: 1131px; */
   }
   .dash-header {
     justify-content: space-between;
@@ -18,7 +18,8 @@
     line-height: 24px;
   }
   .dash-titleIntro span,
-  .dashWallet-icons {
+  .dashWallet-icons,
+  .dnc-text {
     color: #6821c3;
   }
   .dashWallet-icons {
@@ -34,10 +35,15 @@
     font-size: 16px;
     line-height: 24px;
   }
+  .dash-firstMain {
+    height: 330px;
+  }
   .dash-graph {
     background: #fdfbff;
     border: 0.5px solid #c6c6c6;
     border-radius: 8px;
+    width: 688px;
+    height: 330px;
   }
   .dash-divTwo {
     justify-content: space-between;
@@ -50,7 +56,9 @@
     height: 40px;
     text-align: center;
   }
-  .dashWallet-buttn {
+  .dashWallet-buttn,
+  .dash-section p,
+  .dash-headerr {
     border: none;
     font-weight: 400;
     font-size: 14px;
@@ -65,5 +73,50 @@
   }
   .dashWallet-graph {
     margin-left: -16px;
+  }
+  .dash-firstArrt {
+    width: 295px;
+    height: 118px;
+    background: #6821c3;
+    border: 0.5px solid #c6c6c6;
+    border-radius: 8px;
+  }
+  .dash-section {
+    justify-content: space-evenly;
+    color: white;
+  }
+  .arrow-upRight {
+    margin-top: 2px;
+    transform: rotate(16.72deg);
+  }
+  .dash-largText {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #f9f4ff;
+  }
+  .dash-dnc {
+    justify-content: space-between;
+  }
+  .dnc-textTwo {
+    color: #898989;
+  }
+  .dnc-cash {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .dash-hr {
+    border: 0.5px solid #c6c6c6;
+  }
+  .usdt {
+    color: #0d86cb;
+  }
+  .dashArticlee {
+    background: #fdfbff;
+    border: 0.5px solid #c6c6c6;
+    border-radius: 8px;
+    width: 295px;
+    height: 196px;
   }
 }

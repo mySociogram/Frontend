@@ -80,14 +80,14 @@ const SideBar = () => {
           <BiMessageRoundedDetail
             className='side-icons'
             style={{
-              color: location.pathname === '/Message' ? '#6821C3' : 'black',
+              color: location.pathname === '/message' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/Message'
+            to='/message'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/Message' ? '#6821C3' : 'black',
+              color: location.pathname === '/message' ? '#6821C3' : 'black',
             }}
           >
             <p>Message</p>
@@ -98,15 +98,15 @@ const SideBar = () => {
             className='side-icons'
             style={{
               color:
-                location.pathname === '/Notification' ? '#6821C3' : 'black',
+                location.pathname === '/notification' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/Notification'
+            to='/notification'
             className='Link-sideText ms-lg-2'
             style={{
               color:
-                location.pathname === '/Notification' ? '#6821C3' : 'black',
+                location.pathname === '/notification' ? '#6821C3' : 'black',
             }}
           >
             <p>Notification</p>
@@ -116,14 +116,14 @@ const SideBar = () => {
           <BsGraphUp
             className='side-icons'
             style={{
-              color: location.pathname === '/Market' ? '#6821C3' : 'black',
+              color: location.pathname === '/market' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/Market'
+            to='/market'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/Market' ? '#6821C3' : 'black',
+              color: location.pathname === '/market' ? '#6821C3' : 'black',
             }}
           >
             <p>Market</p>
@@ -159,14 +159,14 @@ const SideBar = () => {
                 <ImFilm
                   className='side-icons'
                   style={{
-                    color: location.pathname === '/Video' ? '#6821C3' : 'black',
+                    color: location.pathname === '/video' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/Video'
+                  to='/video'
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color: location.pathname === '/Video' ? '#6821C3' : 'black',
+                    color: location.pathname === '/video' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Video</p>
@@ -176,14 +176,14 @@ const SideBar = () => {
                 <FiMusic
                   className='side-icons'
                   style={{
-                    color: location.pathname === '/Music' ? '#6821C3' : 'black',
+                    color: location.pathname === '/music' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/Music'
+                  to='/music'
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color: location.pathname === '/Music' ? '#6821C3' : 'black',
+                    color: location.pathname === '/music' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Music</p>
@@ -194,15 +194,15 @@ const SideBar = () => {
                   className='side-icons'
                   style={{
                     color:
-                      location.pathname === '/Podcast' ? '#6821C3' : 'black',
+                      location.pathname === '/podcast' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/Podcast'
+                  to='/podcast'
                   className='Link-sideText ms-lg-2'
                   style={{
                     color:
-                      location.pathname === '/Podcast' ? '#6821C3' : 'black',
+                      location.pathname === '/podcast' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Podcast</p>
@@ -212,14 +212,14 @@ const SideBar = () => {
                 <BsCalendar4Event
                   className='side-icons'
                   style={{
-                    color: location.pathname === '/Event' ? '#6821C3' : 'black',
+                    color: location.pathname === '/event' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/Event'
+                  to='/event'
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color: location.pathname === '/Event' ? '#6821C3' : 'black',
+                    color: location.pathname === '/event' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Event</p>
@@ -229,14 +229,14 @@ const SideBar = () => {
                 <TbDeviceGamepad2
                   className='side-icons'
                   style={{
-                    color: location.pathname === '/Game' ? '#6821C3' : 'black',
+                    color: location.pathname === '/game' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/Game'
+                  to='/game'
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color: location.pathname === '/Game' ? '#6821C3' : 'black',
+                    color: location.pathname === '/game' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Game</p>
@@ -246,14 +246,14 @@ const SideBar = () => {
                 <BiMoviePlay
                   className='side-icons'
                   style={{
-                    color: location.pathname === '/Movie' ? '#6821C3' : 'black',
+                    color: location.pathname === '/movie' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/Movie'
+                  to='/movie'
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color: location.pathname === '/Movie' ? '#6821C3' : 'black',
+                    color: location.pathname === '/movie' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Movie</p>
@@ -263,14 +263,14 @@ const SideBar = () => {
                 <MdMoreHoriz
                   className='side-icons'
                   style={{
-                    color: location.pathname === '/More' ? '#6821C3' : 'black',
+                    color: location.pathname === '/more' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
-                  to='/More'
+                  to='/more'
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color: location.pathname === '/More' ? '#6821C3' : 'black',
+                    color: location.pathname === '/more' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>More</p>

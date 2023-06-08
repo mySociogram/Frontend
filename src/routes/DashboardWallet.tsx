@@ -52,7 +52,7 @@ const DashboardWallet = () => {
           </div>
         </article>
       </header>
-      <main className='mt-lg-4 border border-danger d-flex'>
+      <main className='mt-lg-4 d-flex dash-firstMain'>
         <section className='dash-graph p-lg-3'>
           <div className='d-flex dash-divTwo mt-lg-3'>
             <p className='mt-lg-2'>Portfolio History</p>
@@ -87,41 +87,70 @@ const DashboardWallet = () => {
           </div>
           <Graph />
         </section>
-        <section>
-          <article className='border border-danger'>
-            <section className='d-flex'>
+        <section className='ms-lg-3'>
+          <article className='dash-firstArrt p-lg-3'>
+            <section className='d-flex dash-section'>
               <p>Total Portfolio</p>
-              <div>
-                <BsArrowUpRight />
-                <p>5%</p>
+              <div className='d-flex'>
+                <BsArrowUpRight className='arrow-upRight' />
+                <p className='ms-lg-1'>5%</p>
               </div>
             </section>
-            <div>
+            <div className='text-center dash-largText'>
               <p>$199.30</p>
             </div>
           </article>
-          <article className='border border-info'>
-            <header>Assets</header>
+          <article className='mt-lg-3 p-lg-3 dashArticlee'>
+            <header className='dash-headerr'>Assets</header>
             <main>
-              <article>
-                <p>DNC</p>
-                <p>50,000.00</p>
+              <article className='d-flex mt-lg-2 dash-dnc'>
+                <p className='dash-textt dnc-text'>DNC</p>
+                <p className='dash-textt dnc-textTwo'>50,000.00</p>
               </article>
-              <div>
+              <div className='text-end dnc-cash'>
                 <p>$190.30</p>
               </div>
-              <hr />
-              <article>
-                <p>USDT</p>
-                <p>9.00</p>
+              <hr className='dash-hr' />
+              <article className='d-flex dash-dnc'>
+                <p className='dash-textt usdt'>USDT</p>
+                <p className='dash-textt dnc-textTwo'>9.00</p>
               </article>
               <div>
-                <p>$9.00</p>
+                <p className='text-end dnc-cash'>$9.00</p>
               </div>
             </main>
           </article>
         </section>
       </main>
+      <section className='mt-lg-4'>
+        <article>
+          <div>
+            <img src='' alt='' />
+            <p></p>
+          </div>
+          <div>
+            <p></p>
+          </div>
+        </article>
+        <article>
+          <div>
+            <img src='' alt='' />
+            <p></p>
+          </div>
+          <div>
+            <p></p>
+          </div>
+        </article>
+        <article>
+          <div>
+            <img src='' alt='' />
+            <p></p>
+          </div>
+          <div>
+            <p></p>
+          </div>
+        </article>
+      </section>
     </section>
   )
 }

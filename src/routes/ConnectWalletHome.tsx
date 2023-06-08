@@ -25,7 +25,7 @@ const ConnectWalletHome = () => {
             <img src={info} alt='info icon' className='info-icon ms-2 mt-1' />
           </article>
           <section className='select_mode'>
-            <Link to='/ConnectWallet' className='select_mode-card mt-lg-3'>
+            <Link to='/connectWallet' className='select_mode-card mt-lg-3'>
               <div className='cw-icons-display'>
                 <img src={meta} alt='metamask icon' className='' />
                 <img src={fantom} alt='fantom icon' className='' />
