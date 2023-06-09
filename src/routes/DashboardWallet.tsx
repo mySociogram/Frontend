@@ -1,6 +1,9 @@
 import React from 'react'
+import data from '../data.json'
 import '../style/DashboardWallet.css'
 import swap from '../assets/swap.png'
+import availableToken from '../assets/availableToken.png'
+import stakedToken from '../assets/stakedToken.png'
 import { AiOutlineArrowUp, AiOutlineArrowDown } from 'react-icons/ai'
 import { BsArrowDownLeft, BsArrowUpRight } from 'react-icons/bs'
 import { IoMdAdd } from 'react-icons/io'
@@ -122,35 +125,72 @@ const DashboardWallet = () => {
           </article>
         </section>
       </main>
-      <section className='mt-lg-4'>
-        <article>
-          <div>
-            <img src='' alt='' />
-            <p></p>
+      <section className='mt-lg-4 dashWal-sec'>
+        <article className='p-lg-3'>
+          <div className='d-flex'>
+            <img src={availableToken} alt='' className='tokenImgs' />
+            <p className='ms-lg-3 dash-textt'>Available Tokens</p>
           </div>
           <div>
-            <p></p>
-          </div>
-        </article>
-        <article>
-          <div>
-            <img src='' alt='' />
-            <p></p>
-          </div>
-          <div>
-            <p></p>
+            <p className='token-price'>$0.00</p>
           </div>
         </article>
-        <article>
-          <div>
-            <img src='' alt='' />
-            <p></p>
+        <article className='p-lg-3'>
+          <div className='d-flex'>
+            <img src={swap} alt='' className='tokenImgs' />
+            <p className='ms-lg-3 dash-textt'>Loaned Tokens</p>
           </div>
           <div>
-            <p></p>
+            <p className='token-price'>$0.00</p>
+          </div>
+        </article>
+        <article className='p-lg-3'>
+          <div className='d-flex'>
+            <img src={stakedToken} alt='' className='tokenImgs' />
+            <p className='ms-lg-3 dash-textt'>Staked Tokens</p>
+          </div>
+          <div>
+            <p className='token-price'>$0.00</p>
           </div>
         </article>
       </section>
+      <main className='mt-lg-5'>
+        <section className='d-flex transac-sec'>
+          <h6>Transaction History</h6>
+          <div className='viewAll-buttn text-center p-lg-1 mt-lg-1'>
+            <p>View all</p>
+          </div>
+        </section>
+        <article className='dashWal-table mt-lg-3 p-lg-3'>
+          <header className='d-flex dash-textt'>
+            <p>Txn Hash</p>
+            <p>Method</p>
+            <p>Age</p>
+            <p>From</p>
+            <p>To</p>
+            <p>Quantity</p>
+            <p>Status</p>
+          </header>
+          <hr />
+          <main>
+            {data.map((item, key) => {
+              return (
+                <div key={key}>
+                  <section className='d-flex data-sec'>
+                    <p>{item.txnHash}</p>
+                    <p>{item.method}</p>
+                    <p>{item.age}</p>
+                    <p>{item.from}</p>
+                    <p>{item.to}</p>
+                    <p>{item.quantity}</p>
+                    <p>{item.status}</p>
+                  </section>
+                </div>
+              )
+            })}
+          </main>
+        </article>
+      </main>
     </section>
   )
 }

@@ -58,7 +58,9 @@
   }
   .dashWallet-buttn,
   .dash-section p,
-  .dash-headerr {
+  .dash-headerr,
+  .viewAll-buttn p,
+  .data-sec p {
     border: none;
     font-weight: 400;
     font-size: 14px;
@@ -118,5 +120,55 @@
     border-radius: 8px;
     width: 295px;
     height: 196px;
+  }
+  .dashWal-sec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .dashWal-sec article {
+    border: 0.5px solid #c6c6c6;
+    height: 96px;
+    background: #fdfbff;
+    border-radius: 8px;
+  }
+  .tokenImgs {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+  }
+  .token-price {
+    margin-left: 2rem !important;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .transac-sec {
+    justify-content: space-between;
+  }
+  .transac-sec h6 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #08070a;
+  }
+  .viewAll-buttn {
+    border: 0.5px solid #c6c6c6;
+    width: 75px;
+    height: 33px;
+    background: #f9f4ff;
+    border-radius: 4px;
+  }
+  .dashWal-table {
+    border: 0.5px solid #c6c6c6;
+    background: #fdfbff;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .dashWal-table header,
+  .data-sec {
+    justify-content: space-between;
+  }
+  .data-sec {
+    border: 1px solid blueviolet;
   }
 }
