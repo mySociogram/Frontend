@@ -9,10 +9,11 @@ const DashHeader = () => {
     <header className='d-flex dash-header'>
       <article className='dash-titleIntro'>
         <h3>Hi Blitz!</h3>
-        <p>
+        <p>Nothing to see here.</p>
+        {/* <p>
           Your <span>Portfolio</span> has gone up <span>5%</span> since your
           last visit.
-        </p>
+        </p> */}
       </article>
       <article className='d-flex'>
         <div>

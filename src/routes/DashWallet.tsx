@@ -49,33 +49,15 @@ const DashWallet = () => {
           <article className='dash-firstArrt p-lg-3'>
             <section className='d-flex dash-section'>
               <p>Total Portfolio</p>
-              <div className='d-flex'>
-                <BsArrowUpRight className='arrow-upRight' />
-                <p className='ms-lg-1'>5%</p>
-              </div>
             </section>
             <div className='text-center dash-largText'>
-              <p>$199.30</p>
+              <p>$0.00</p>
             </div>
           </article>
           <article className='mt-lg-3 p-lg-3 dashArticlee'>
             <header className='dash-headerr'>Assets</header>
-            <main>
-              <article className='d-flex mt-lg-2 dash-dnc'>
-                <p className='dash-textt dnc-text'>DNC</p>
-                <p className='dash-textt dnc-textTwo'>50,000.00</p>
-              </article>
-              <div className='text-end dnc-cash'>
-                <p>$190.30</p>
-              </div>
-              <hr className='dash-hr' />
-              <article className='d-flex dash-dnc'>
-                <p className='dash-textt usdt'>USDT</p>
-                <p className='dash-textt dnc-textTwo'>9.00</p>
-              </article>
-              <div>
-                <p className='text-end dnc-cash'>$9.00</p>
-              </div>
+            <main className='text-center mt-lg-5 dash-textt'>
+              <p>No tokens found in this wallet</p>
             </main>
           </article>
         </section>
@@ -99,46 +81,8 @@ const DashWallet = () => {
             <p>Status</p>
           </header>
           <hr />
-          <main>
-            {data.map((item, key) => {
-              return (
-                <div key={key}>
-                  <section className='d-flex data-sec mt-lg-2'>
-                    <p style={{ color: '#6821C3' }}>{item.txnHash}</p>
-                    <div className='method-text text-center'>
-                      <p className='mt-lg-1'>{item.method}</p>
-                    </div>
-                    <p>{item.age}</p>
-                    <p>{item.from}</p>
-                    <p>{item.to}</p>
-                    <p>{item.quantity}</p>
-                    <div
-                      className='text-center status-text'
-                      style={{
-                        color:
-                          item.status === 'Success'
-                            ? '#6821C3'
-                            : item.status === 'Pending'
-                            ? '#C29E21'
-                            : item.status === 'Failed'
-                            ? '#DD2828'
-                            : 'black',
-                        background:
-                          item.status === 'Success'
-                            ? '#F7F0FF'
-                            : item.status === 'Pending'
-                            ? '#FFF9F0'
-                            : item.status === 'Failed'
-                            ? '#FFF0F0'
-                            : 'grey',
-                      }}
-                    >
-                      <p className='mt-lg-1'>{item.status}</p>
-                    </div>
-                  </section>
-                </div>
-              )
-            })}
+          <main className='text-center footerText'>
+            <p>No recent transactions</p>
           </main>
         </article>
       </main>

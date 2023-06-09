@@ -1,8 +1,4 @@
 @media (min-width: 1024px) {
-  .dashboard-wallet {
-    /* border: 1px solid red; */
-    /* width: 1131px; */
-  }
   .dash-header {
     justify-content: space-between;
   }
@@ -60,7 +56,8 @@
   .dash-section p,
   .dash-headerr,
   .viewAll-buttn p,
-  .data-sec p {
+  .data-sec p,
+  .footerText {
     border: none;
     font-weight: 400;
     font-size: 14px;
