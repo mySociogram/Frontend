@@ -2,7 +2,7 @@
   {
     "id": 1,
     "txnHash": "0xhDc2sj...w5e",
-    "method": "swap",
+    "method": "Swap",
     "age": "12hrs",
     "from": "0xhDc2sj...w5e",
     "to": "0xhDc2sj...w5e",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "txnHash": "0xhDc2sj...w5e",
-    "method": "send",
+    "method": "Send",
     "age": "12hrs",
     "from": "0xhDc2sj...w5e",
     "to": "0xhDc2sj...w5e",
@@ -22,7 +22,7 @@
   {
     "id": 3,
     "txnHash": "0xhDc2sj...w5e",
-    "method": "swap",
+    "method": "Swap",
     "age": "12hrs",
     "from": "0xhDc2sj...w5e",
     "to": "0xhDc2sj...w5e",

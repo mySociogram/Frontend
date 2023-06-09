@@ -1,12 +1,12 @@
 import React from 'react'
 import data from '../data.json'
 import '../style/DashboardWallet.css'
-import {BsArrowUpRight } from 'react-icons/bs'
+import { BsArrowUpRight } from 'react-icons/bs'
 import Graph from '../components/Graph'
 import DashHeader from '../components/DashHeader'
 import DashTokens from '../components/DashTokens'
 
-const DashboardWallet = () => {
+const DashWallet = () => {
   return (
     <section className='dashboard-wallet p-lg-5'>
       <DashHeader />
@@ -146,4 +146,4 @@ const DashboardWallet = () => {
   )
 }
 
-export default DashboardWallet
+export default DashWallet

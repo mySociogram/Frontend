@@ -168,7 +168,18 @@
   .data-sec {
     justify-content: space-between;
   }
-  .data-sec {
-    border: 1px solid blueviolet;
+  .status-text,
+  .method-text {
+    height: 31px;
+    border-radius: 6px;
+    margin-top: -5px;
+  }
+  .status-text {
+    width: 72px;
+  }
+  .method-text {
+    width: 50px;
+    color: #6821c3;
+    background: #f7f0ff;
   }
 }

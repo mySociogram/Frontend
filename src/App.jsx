@@ -11,6 +11,7 @@ import './style/Home.css'
 import ModalTest from './routes/ModalTest'
 import DashboardWallet from './routes/DashboardWallet'
 import Community from './routes/Community'
+import DashWallet from './routes/DashWallet'
 
 const router = createBrowserRouter([
   // {
@@ -36,13 +37,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-
         path: '/community',
         element: <Community />,
       },
       {
         path: '/dashboardWallet',
         element: <DashboardWallet />,
+      },
+      {
+        path: '/dashWallet',
+        element: <DashWallet />,
       },
     ],
   },
