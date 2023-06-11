@@ -4,12 +4,15 @@ import { IoMdClose } from 'react-icons/io'
 import ramp from '../../assets/ramp.png'
 import { BsArrowRight } from 'react-icons/bs'
 
-const Buy = ({ closeSelf, modalContentRef }) => {
+const Buy = (props) => {
+  if (!props.pop) {
+    return null
+  }
   return (
-    <section className='sec-buy p-4'>
-      <main className='main-buy p-3 p-lg-4' ref={modalContentRef}>
+    <section className='sec-buy p-4 modal'>
+      <main className='main-buy p-3 p-lg-4'>
         <div className='exit-icon'>
-          <IoMdClose onClick={closeSelf} />
+          <IoMdClose onClick={props.onClose} />
         </div>
         <article className='mt-4'>
           <h4 className='heading-text'>Buy</h4>

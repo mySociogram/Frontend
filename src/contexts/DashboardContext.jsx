@@ -56,8 +56,8 @@ const DashboardContextProvider = ({ children }) => {
     let accounts = await window.ethereum.request({
       method: 'eth_requestAccounts',
     })
-    window.location.replace('http://localhost:5173/dashboard/home')
     updateWallet(accounts)
+    window.location.replace('http://localhost:5173/dashboard/home')
   }
 
   return (

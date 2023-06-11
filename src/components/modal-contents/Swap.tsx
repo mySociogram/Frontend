@@ -3,12 +3,15 @@ import { IoMdClose } from 'react-icons/io'
 import '../../style/Swap.css'
 import swap from '../../assets/swap.png'
 
-const Swap = ({ closeSelf, modalContentRef }) => {
+const Swap = (props) => {
+  if (!props.show) {
+    return null
+  }
   return (
-    <section className='p-4 sec-swap' ref={modalContentRef}>
+    <section className='p-4 sec-swap modal'>
       <main className='swap-firstMain p-3 p-lg-4'>
         <div className='exit-icon'>
-          <IoMdClose onClick={closeSelf} />
+          <IoMdClose onClick={props.onClose} />
         </div>
         <article className='mt-4'>
           <h4 className='heading-text'>Swap</h4>
