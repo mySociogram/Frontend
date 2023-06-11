@@ -14,38 +14,38 @@ import Community from './routes/Community'
 import DashWallet from './routes/DashWallet'
 
 const router = createBrowserRouter([
-  // {
-  //   path: '/',
-  //   element: <ConnectWalletLayout />,
-  //   children: [
-  //     {
-  //       path: '/',
-  //       element: <ConnectWalletHome />,
-  //     },
-  //     {
-  //       path: '/connectWallet',
-  //       element: <ConnectWallet />,
-  //     },
-  //   ],
-  // },
   {
     path: '/',
-    element: <DashboardLayout />,
+    element: <ConnectWalletLayout />,
     children: [
       {
         path: '/',
+        element: <ConnectWalletHome />,
+      },
+      {
+        path: '/connectWallet',
+        element: <ConnectWallet />,
+      },
+    ],
+  },
+  {
+    path: '/dashboard',
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: '/dashboard/home',
         element: <Home />,
       },
       {
-        path: '/community',
+        path: '/dashboard/community',
         element: <Community />,
       },
       {
-        path: '/dashboardWallet',
+        path: '/dashboard/dashboardWallet',
         element: <DashboardWallet />,
       },
       {
-        path: '/dashWallet',
+        path: '/dashboard/dashWallet',
         element: <DashWallet />,
       },
     ],

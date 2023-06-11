@@ -27,14 +27,16 @@ const SideBar = () => {
           <AiOutlineHome
             className='side-icons'
             style={{
-              color: location.pathname === '/' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/home' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/'
+            to='/dashboard/home'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/home' ? '#6821C3' : 'black',
             }}
           >
             <p>Home</p>
@@ -44,14 +46,20 @@ const SideBar = () => {
           <BsFillPeopleFill
             className='side-icons'
             style={{
-              color: location.pathname === '/community' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/community'
+                  ? '#6821C3'
+                  : 'black',
             }}
           />
           <Link
-            to='/community'
+            to='/dashboard/community'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/community' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/community'
+                  ? '#6821C3'
+                  : 'black',
             }}
           >
             <p>Community</p>
@@ -62,15 +70,19 @@ const SideBar = () => {
             className='side-icons'
             style={{
               color:
-                location.pathname === '/dashWallet' ? '#6821C3' : 'black',
+                location.pathname === '/dashboard/dashWallet'
+                  ? '#6821C3'
+                  : 'black',
             }}
           />
           <Link
-            to='/dashWallet'
+            to='/dashboard/dashWallet'
             className='Link-sideText ms-lg-2'
             style={{
               color:
-                location.pathname === '/dashWallet' ? '#6821C3' : 'black',
+                location.pathname === '/dashboard/dashWallet'
+                  ? '#6821C3'
+                  : 'black',
             }}
           >
             <p>Wallet</p>
@@ -80,14 +92,14 @@ const SideBar = () => {
           <BiMessageRoundedDetail
             className='side-icons'
             style={{
-              color: location.pathname === '/message' ? '#6821C3' : 'black',
+              color: location.pathname === '/dashboard/message' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/message'
+            to='/dashboard/message'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/message' ? '#6821C3' : 'black',
+              color: location.pathname === '/dashboard/message' ? '#6821C3' : 'black',
             }}
           >
             <p>Message</p>
@@ -98,15 +110,15 @@ const SideBar = () => {
             className='side-icons'
             style={{
               color:
-                location.pathname === '/notification' ? '#6821C3' : 'black',
+                location.pathname === '/dashboard/notification' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/notification'
+            to='/dashboard/notification'
             className='Link-sideText ms-lg-2'
             style={{
               color:
-                location.pathname === '/notification' ? '#6821C3' : 'black',
+                location.pathname === '/dashboard/notification' ? '#6821C3' : 'black',
             }}
           >
             <p>Notification</p>
@@ -116,14 +128,14 @@ const SideBar = () => {
           <BsGraphUp
             className='side-icons'
             style={{
-              color: location.pathname === '/market' ? '#6821C3' : 'black',
+              color: location.pathname === '/dashboard/market' ? '#6821C3' : 'black',
             }}
           />
           <Link
-            to='/market'
+            to='/dashboard/market'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/market' ? '#6821C3' : 'black',
+              color: location.pathname === '/dashboard/market' ? '#6821C3' : 'black',
             }}
           >
             <p>Market</p>

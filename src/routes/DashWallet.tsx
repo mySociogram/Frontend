@@ -43,7 +43,21 @@ const DashWallet = () => {
               </ul>
             </div>
           </div>
-          <Graph />
+          <main>
+            <article>
+              <label htmlFor='customRange1' className='form-label'>
+                Example range
+              </label>
+            </article>
+            <article>
+              <input
+                type='range'
+                className='form-range'
+                id='customRange1'
+              ></input>
+            </article>
+          </main>
+          {/* <Graph /> */}
         </section>
         <section className='ms-lg-3'>
           <article className='dash-firstArrt p-lg-3'>
