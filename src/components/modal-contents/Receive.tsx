@@ -6,7 +6,7 @@ import copy from '../../assets/copy.png'
 import { DashboardContext } from '../../contexts/DashboardContext'
 
 const Receive = (props) => {
-  const { wallet } = useContext(DashboardContext)
+  const { wallet, address } = useContext(DashboardContext)
   if (!props.open) {
     return null
   }
@@ -25,7 +25,7 @@ const Receive = (props) => {
           <p className='mt-4'>Your Address</p>
           <div className='d-flex divAdd mb-3 mb-lg-4'>
             {wallet.accounts.length > 0 && (
-              <small className='smallAdd-text'>{wallet.accounts[0]}</small>
+              <small className='smallAdd-text'>{address[0][0]}</small>
             )}
             <img src={copy} alt='copy' className='ms-2 copy-icon' />
           </div>

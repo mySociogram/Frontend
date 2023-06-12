@@ -52,6 +52,10 @@
     width: 100%;
     padding: 8px;
   }
+  /* .text-overflow {
+    border: 1px solid red;
+    text-overflow: ellipsis;
+  } */
   .nav-secondsec > p {
     margin-bottom: 0;
   }

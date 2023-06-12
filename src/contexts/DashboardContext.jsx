@@ -14,14 +14,21 @@ const DashboardContextProvider = ({ children }) => {
   const isMetaMask = injectedProvider ? window.ethereum.isMetaMask : false
 
   const [hasProvider, setHasProvider] = useState(null)
-  const initialState = { accounts: [] } /* New */
+  const initialState = { accounts: [] }
   const [wallet, setWallet] = useState(initialState)
+  const [loading, setLoading] = useState(true)
 
   //updateWallet function that sets your new wallet state when you connect.
   const updateWallet = async (accounts) => {
     setWallet({ accounts })
+    setLoading(false)
   }
   console.log(wallet)
+
+  //convert the object into an array
+  const address = Object.keys(wallet).map((key) => wallet[key])
+  console.log(address[0][0])
+
 
   useEffect(() => {
     const refreshAccounts = (accounts) => {
@@ -57,7 +64,6 @@ const DashboardContextProvider = ({ children }) => {
       method: 'eth_requestAccounts',
     })
     updateWallet(accounts)
-    window.location.replace('http://localhost:5173/dashboard/home')
   }
 
   return (
@@ -67,6 +73,9 @@ const DashboardContextProvider = ({ children }) => {
         injectedProvider,
         hasProvider,
         wallet,
+        loading,
+        address,
+        setLoading,
         handleConnect,
         setWallet,
       }}

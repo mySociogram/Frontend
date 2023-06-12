@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import { BiSearchAlt2 } from 'react-icons/bi'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import avatar from '../assets/avatar.png'
@@ -6,7 +6,12 @@ import '../style/NavBar.css'
 import { DashboardContext } from '../contexts/DashboardContext'
 
 const NavBar = () => {
-  const { wallet } = useContext(DashboardContext)
+  const { wallet, loading, address } = useContext(DashboardContext)
+
+  const prefixLength = 6
+  const suffixLength = 4
+  // const prefix = address[0][0].slice(0, prefixLength)
+  // const suffix = address[0][0].slice(-suffixLength)
 
   return (
     <header className='p-lg-5 nav-header d-flex'>
@@ -24,7 +29,16 @@ const NavBar = () => {
         <section className='nav-secondsec ms-lg-5'>
           <img src={avatar} alt='avatar' />
           {/* <p className=''>0xhDc2sj...w5e</p> */}
-          {wallet.accounts.length > 0 && <div>{wallet.accounts[0]}</div>}
+          {loading === false && (
+            <Fragment>
+              {wallet.accounts.length > 0 && (
+                <div className='text-overflow'>{`${address[0][0].slice(
+                  0,
+                  prefixLength
+                )}...${address[0][0].slice(-suffixLength)}`}</div>
+              )}
+            </Fragment>
+          )}
           <RiArrowDropDownLine className='nav-arrow ' />
         </section>
       </main>
