@@ -75,10 +75,10 @@
     margin-left: -16px;
   }
   .dash-firstArrt {
+    border: 0.5px solid #c6c6c6;
     width: 295px;
     height: 118px;
     background: #6821c3;
-    border: 0.5px solid #c6c6c6;
     border-radius: 8px;
   }
   .dash-section {
@@ -179,5 +179,16 @@
     width: 50px;
     color: #6821c3;
     background: #f7f0ff;
+  }
+}
+@media (min-width: 1440px) {
+  .dash-firstMain {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-gap: 40px !important;
+  }
+  .dashArticlee,
+  .dash-firstArrt {
+    width: 310px;
   }
 }

@@ -26,8 +26,6 @@ const DashboardContextProvider = ({ children }) => {
 
     if (accounts && accounts.length > 0) {
       setKey(true)
-      // Redirect to another page
-      // window.location.replace('http://localhost:5173/dashboard/home')
     }
   }
   console.log(wallet)
@@ -72,6 +70,13 @@ const DashboardContextProvider = ({ children }) => {
     updateWallet(accounts)
   }
 
+  const handleDisconnect = async () => {
+    updateWallet(initialState)
+    window.location.replace('http://localhost:5173')
+  }
+
+  console.log(wallet)
+
   return (
     <DashboardContext.Provider
       value={{
@@ -84,6 +89,7 @@ const DashboardContextProvider = ({ children }) => {
         key,
         setLoading,
         handleConnect,
+        handleDisconnect,
         setWallet,
       }}
     >

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../style/SideBar.css'
 import { AiOutlineHome } from 'react-icons/ai'
 import {
@@ -16,8 +16,10 @@ import { TbDeviceGamepad2 } from 'react-icons/tb'
 import { MdMoreHoriz } from 'react-icons/md'
 import { Link, useLocation } from 'react-router-dom'
 import activity from '../assets/activity.png'
+import { DashboardContext } from '../contexts/DashboardContext'
 
 const SideBar = () => {
+  const { handleDisconnect } = useContext(DashboardContext)
   const [show, setShow] = useState(false)
   const location = useLocation()
   return (
@@ -92,14 +94,20 @@ const SideBar = () => {
           <BiMessageRoundedDetail
             className='side-icons'
             style={{
-              color: location.pathname === '/dashboard/message' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/message'
+                  ? '#6821C3'
+                  : 'black',
             }}
           />
           <Link
             to='/dashboard/message'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/dashboard/message' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/message'
+                  ? '#6821C3'
+                  : 'black',
             }}
           >
             <p>Message</p>
@@ -110,7 +118,9 @@ const SideBar = () => {
             className='side-icons'
             style={{
               color:
-                location.pathname === '/dashboard/notification' ? '#6821C3' : 'black',
+                location.pathname === '/dashboard/notification'
+                  ? '#6821C3'
+                  : 'black',
             }}
           />
           <Link
@@ -118,7 +128,9 @@ const SideBar = () => {
             className='Link-sideText ms-lg-2'
             style={{
               color:
-                location.pathname === '/dashboard/notification' ? '#6821C3' : 'black',
+                location.pathname === '/dashboard/notification'
+                  ? '#6821C3'
+                  : 'black',
             }}
           >
             <p>Notification</p>
@@ -128,14 +140,16 @@ const SideBar = () => {
           <BsGraphUp
             className='side-icons'
             style={{
-              color: location.pathname === '/dashboard/market' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/market' ? '#6821C3' : 'black',
             }}
           />
           <Link
             to='/dashboard/market'
             className='Link-sideText ms-lg-2'
             style={{
-              color: location.pathname === '/dashboard/market' ? '#6821C3' : 'black',
+              color:
+                location.pathname === '/dashboard/market' ? '#6821C3' : 'black',
             }}
           >
             <p>Market</p>
@@ -292,6 +306,9 @@ const SideBar = () => {
           ) : (
             ''
           )}
+        </section>
+        <section className='Link-sideText logoutText'>
+          <p onClick={handleDisconnect}>Logout</p>
         </section>
       </section>
     </aside>
