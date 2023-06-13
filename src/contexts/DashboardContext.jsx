@@ -1,5 +1,6 @@
 import React, { useState, createContext, useEffect } from 'react'
 import detectEthereumProvider from '@metamask/detect-provider'
+import axios from 'axios'
 
 export const DashboardContext = createContext()
 
@@ -18,6 +19,7 @@ const DashboardContextProvider = ({ children }) => {
   const [wallet, setWallet] = useState(initialState)
   const [loading, setLoading] = useState(true)
   const [key, setKey] = useState(false)
+  const [data, setData] = useState([])
 
   //updateWallet function that sets your new wallet state when you connect.
   const updateWallet = async (accounts) => {
@@ -68,12 +70,13 @@ const DashboardContextProvider = ({ children }) => {
       method: 'eth_requestAccounts',
     })
     updateWallet(accounts)
+
     axios
       .post('http://localhost:3005/users', {
         address: address[0][0],
       })
       .then((response) => {
-        console.log(response)
+        setData(response.data)
       })
 
     // fetch('http://localhost:3005/users', {
@@ -94,6 +97,16 @@ const DashboardContextProvider = ({ children }) => {
     window.location.replace('http://localhost:5173')
   }
 
+  // function createPost() {
+  //   axios
+  //     .post('http://localhost:3005/users', {
+  //       address: address[0][0],
+  //     })
+  //     .then((response) => {
+  //       setData(response.data)
+  //     })
+  // }
+
   return (
     <DashboardContext.Provider
       value={{
@@ -104,6 +117,7 @@ const DashboardContextProvider = ({ children }) => {
         loading,
         address,
         key,
+        data,
         setLoading,
         handleConnect,
         handleDisconnect,
