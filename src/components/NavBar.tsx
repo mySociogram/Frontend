@@ -10,8 +10,6 @@ const NavBar = () => {
 
   const prefixLength = 6
   const suffixLength = 4
-  // const prefix = address[0][0].slice(0, prefixLength)
-  // const suffix = address[0][0].slice(-suffixLength)
 
   return (
     <header className='p-lg-5 nav-header d-flex'>
@@ -28,7 +26,6 @@ const NavBar = () => {
         </section>
         <section className='nav-secondsec ms-lg-5'>
           <img src={avatar} alt='avatar' />
-          {/* <p className=''>0xhDc2sj...w5e</p> */}
           {loading === false && (
             <Fragment>
               {wallet.accounts.length > 0 && (

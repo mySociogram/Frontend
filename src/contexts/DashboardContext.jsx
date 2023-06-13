@@ -17,18 +17,24 @@ const DashboardContextProvider = ({ children }) => {
   const initialState = { accounts: [] }
   const [wallet, setWallet] = useState(initialState)
   const [loading, setLoading] = useState(true)
+  const [key, setKey] = useState(false)
 
   //updateWallet function that sets your new wallet state when you connect.
   const updateWallet = async (accounts) => {
     setWallet({ accounts })
     setLoading(false)
+
+    if (accounts && accounts.length > 0) {
+      setKey(true)
+      // Redirect to another page
+      // window.location.replace('http://localhost:5173/dashboard/home')
+    }
   }
   console.log(wallet)
 
   //convert the object into an array
   const address = Object.keys(wallet).map((key) => wallet[key])
   console.log(address[0][0])
-
 
   useEffect(() => {
     const refreshAccounts = (accounts) => {
@@ -75,6 +81,7 @@ const DashboardContextProvider = ({ children }) => {
         wallet,
         loading,
         address,
+        key,
         setLoading,
         handleConnect,
         setWallet,

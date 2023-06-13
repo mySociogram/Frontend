@@ -8,7 +8,6 @@ import Card from '../components/Card'
 import data from '../components/data'
 import Token from '../components/Token'
 import Topmarket from '../components/Topmarket'
-import Sidebar from '../components/Sidebar/Sidebar'
 import tokendata from '../components/tokendata'
 import market from '../components/market'
 
@@ -69,7 +68,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-      {/* <Sidebar /> */}
       <div className='mainbar'>
         <div className='mainbar1'>{cards}</div>
         <div className='mainbar2'>

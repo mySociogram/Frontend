@@ -2,7 +2,6 @@ import './App.css'
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router'
 import DashboardLayout from './layouts/DashboardLayout'
-// import LandingPageLayout from './layouts/LandingPageLayout'
 import ConnectWalletLayout from './layouts/ConnectWalletLayout'
 import ConnectWalletHome from './routes/ConnectWalletHome'
 import Home from './routes/Home'
@@ -12,6 +11,7 @@ import ModalTest from './routes/ModalTest'
 import DashboardWallet from './routes/DashboardWallet'
 import Community from './routes/Community'
 import DashWallet from './routes/DashWallet'
+
 
 const router = createBrowserRouter([
   {
