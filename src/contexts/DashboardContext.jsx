@@ -68,14 +68,31 @@ const DashboardContextProvider = ({ children }) => {
       method: 'eth_requestAccounts',
     })
     updateWallet(accounts)
+    axios
+      .post('http://localhost:3005/users', {
+        address: address[0][0],
+      })
+      .then((response) => {
+        console.log(response)
+      })
+
+    // fetch('http://localhost:3005/users', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     user: {
+    //       address: address[0][0],
+    //     },
+    //   }),
+    // })
   }
 
   const handleDisconnect = async () => {
     updateWallet(initialState)
     window.location.replace('http://localhost:5173')
   }
-
-  console.log(wallet)
 
   return (
     <DashboardContext.Provider

@@ -43,13 +43,16 @@ const DashWallet = () => {
               </ul>
             </div>
           </div>
-          <main>
+          <main className='d-flex mt-lg-5'>
             <article>
-              <label htmlFor='customRange1' className='form-label'>
-                Example range
+              <label
+                htmlFor='customRange1'
+                className='form-label dnc-cash rangeText'
+              >
+                $0
               </label>
             </article>
-            <article>
+            <article className='ms-lg-3 rangee-main'>
               <input
                 type='range'
                 className='form-range'

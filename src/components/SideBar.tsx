@@ -72,17 +72,17 @@ const SideBar = () => {
             className='side-icons'
             style={{
               color:
-                location.pathname === '/dashboard/dashWallet'
+                location.pathname === '/dashboard/dashboardWallet'
                   ? '#6821C3'
                   : 'black',
             }}
           />
           <Link
-            to='/dashboard/dashWallet'
+            to='/dashboard/dashboardWallet'
             className='Link-sideText ms-lg-2'
             style={{
               color:
-                location.pathname === '/dashboard/dashWallet'
+                location.pathname === '/dashboard/dashboardWallet'
                   ? '#6821C3'
                   : 'black',
             }}
