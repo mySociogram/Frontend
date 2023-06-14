@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router'
 import DashboardLayout from './layouts/DashboardLayout'
 import ConnectWalletLayout from './layouts/ConnectWalletLayout'
 import ConnectWalletHome from './routes/ConnectWalletHome'
-import Home from './routes/Home'
+import DashboardHome from './routes/DashboardHome'
 import ConnectWallet from './routes/ConnectWallet'
 import './style/Home.css'
 import ModalTest from './routes/ModalTest'
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/dashboard/home',
-        element: <Home />,
+        element: <DashboardHome />,
       },
       {
         path: '/dashboard/community',
