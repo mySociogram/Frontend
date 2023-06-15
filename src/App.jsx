@@ -5,6 +5,7 @@ import DashboardLayout from './layouts/DashboardLayout'
 import ConnectWalletLayout from './layouts/ConnectWalletLayout'
 import ConnectWalletHome from './routes/ConnectWalletHome'
 import DashboardHome from './routes/DashboardHome'
+import Home from './routes/Home'
 import ConnectWallet from './routes/ConnectWallet'
 import './style/Home.css'
 import ModalTest from './routes/ModalTest'
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/dashboard/home',
-        element: <DashboardHome />,
+        element: <Home />,
       },
       {
         path: '/dashboard/community',

@@ -6,37 +6,37 @@ function Card(props) {
   return (
 
     <div className='display-card'>
-        <img src={`./img/${props.displayImg}`} className='display-picture'/>
+        <img src={props.displayImg} className='display-picture'/>
         <div className='card-details'>
             <h6>{props.name}</h6>
             <small>{props.username}</small>
             <p>{props.comment}</p>
-            <img src={`./img/${props.coverImg}`} style={{width: '100%'}}/>
+            <img src={props.coverImg} style={{width: '100%'}}/>
             <div className='actions-column'>
                 <div className='dnc'>
                     <small>{props.tokenName}</small>
-                    <img src={`./img/${props.tokenImage}`} style={{width:'18px', height:'15px'}}/> 
+                    <img src={props.tokenImage} style={{width:'18px', height:'15px'}}/> 
                     <small>{props.tokenNumber}</small> 
                 </div>
                 <div className='icons-reaction'>
-                    <img src={`./img/${props.loveIcon}`} style={{width:'15px', height:'14px'}}/>
+                    <img src={props.loveIcon} style={{width:'15px', height:'14px'}}/>
                     <small>{props.loveNumber}</small>
                 </div>
                 <div className='icons-reaction'>
-                    <img src={`./img/${props.commentIcon}`} style={{width:'15px', height:'14px'}}/>
+                    <img src={props.commentIcon} style={{width:'15px', height:'14px'}}/>
                     <small>{props.commentNumber}</small>
                 </div>
                 <div className='icons-reaction'>
-                    <img src={`./img/${props.graphIcon}`} style={{width:'15px', height:'14px'}}/>
+                    <img src={props.graphIcon} style={{width:'15px', height:'14px'}}/>
                     <small>{props.graphNumber}</small>
                 </div>
                 <div className='icons-reaction'>
-                    <img src={`./img/${props.flagImg}`} style={{width:'15px', height:'14px'}}/>
+                    <img src={props.flagImg} style={{width:'15px', height:'14px'}}/>
                 </div>
                 
             </div>
         </div>
-        <img src={`./img/${props.menuButton}`} style={{marginLeft:'10px'}}/>
+        <img src={props.menuButton} style={{marginLeft:'10px'}}/>
     </div>      
   )
 }

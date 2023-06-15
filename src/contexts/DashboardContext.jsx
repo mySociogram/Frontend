@@ -28,6 +28,8 @@ const DashboardContextProvider = ({ children }) => {
 
     if (accounts && accounts.length > 0) {
       setKey(true)
+    } else {
+      setKey(false)
     }
   }
   console.log(wallet)
@@ -73,12 +75,12 @@ const DashboardContextProvider = ({ children }) => {
 
     axios
       .post('http://localhost:3005/users', {
-        address: address[0][0],
+        walletId: address[0][0],
       })
       .then((response) => {
         setData(response.data)
       })
-
+    console.log(data)
     // fetch('http://localhost:3005/users', {
     //   method: 'POST',
     //   headers: {
@@ -91,9 +93,10 @@ const DashboardContextProvider = ({ children }) => {
     //   }),
     // })
   }
+  console.log(data)
 
   const handleDisconnect = async () => {
-    updateWallet(initialState)
+    // updateWallet(initialState)
     window.location.replace('http://localhost:5173')
   }
 
@@ -113,6 +116,7 @@ const DashboardContextProvider = ({ children }) => {
         isMetaMask,
         injectedProvider,
         hasProvider,
+        initialState,
         wallet,
         loading,
         address,
