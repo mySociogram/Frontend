@@ -1,8 +1,10 @@
 import React from 'react'
 import '../style/Home.css'
 import '../components/Sidebar/Sidebar.css'
-import { TbGridDots } from 'react-icons/tb'
-import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
+import avatar from '../assets/avatar.png'
+import graph from '../assets/graph.png'
+import picture from '../assets/picture.png'
+import video from '../assets/video.png'
 import './Mainbar.css'
 import Card from '../components/Card'
 import data from '../components/data'
@@ -68,10 +70,24 @@ const Home = () => {
 
   return (
     <section>
-      <article>Hello world</article>
-      <div className='home mt-lg-3'>
+      <article className='p-lg-4 mt-lg-4'>
+        <div className='textbar p-lg-3 ms-lg-1'>
+          <img src={avatar} alt='avatar' />
+          <input
+            type='search'
+            placeholder='  Say something!'
+            className='home-searchbar p-lg-1'
+          />
+          <article className='d-flex search-iconz'>
+            <img src={graph} alt='graph' />
+            <img src={picture} alt='picture' className='ms-lg-3' />
+            <img src={video} alt='video' className='ms-lg-3' />
+          </article>
+        </div>
+      </article>
+      <div className='home'>
         <div className='mainbar'>
-          <div className='mainbar1'>{cards}</div>
+          <div className='mainbar1 mt-lg-3'>{cards}</div>
           <div className='mainbar2 border border-danger'>
             <div className='mainbar2-card'>
               <div className='mainbar2-details'>

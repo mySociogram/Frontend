@@ -32,6 +32,24 @@
   width: 25%;
   height: 100vh;
 }
+.textbar {
+  border: 1px solid #ffffff;
+  width: 600px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.home-searchbar {
+  border: 1px dotted #c6c6c6;
+  width: 525px;
+  margin-left: 3rem;
+  transform: translateY(-2.1rem);
+}
+.search-iconz {
+  justify-content: end !important;
+  transform: translateY(-3.6rem);
+  margin-left: -42px;
+}
 .mainbar {
   padding-inline: 20px;
   position: static;

@@ -65,30 +65,41 @@ const DashboardContextProvider = ({ children }) => {
     }
   }, [])
 
-  const handleConnect = async () => {
-    let accounts = await window.ethereum.request({
-      method: 'eth_requestAccounts',
-    })
-    updateWallet(accounts)
+  // const handleConnect = async () => {
+  //   let accounts = await window.ethereum.request({
+  //     method: 'eth_requestAccounts',
+  //   })
+  //   updateWallet(accounts)
 
-    axios
-      .post('http://localhost:3005/users', {
-        walletId: address[0][0],
+  //   axios
+  //     .post('http://localhost:3005/users', {
+  //       walletId: address[0][0],
+  //     })
+  //     .then((response) => {
+  //       setData(response.data)
+  //     })
+  // }
+  const handleConnect = async () => {
+    try {
+      const accounts = await window.ethereum.request({
+        method: 'eth_requestAccounts',
       })
-      .then((response) => {
-        setData(response.data)
-      })
-    // fetch('http://localhost:3005/users', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     user: {
-    //       address: address[0][0],
-    //     },
-    //   }),
-    // })
+
+      updateWallet(accounts)
+
+      axios
+        .post('http://localhost:3005/users', {
+          walletId: address[0][0],
+        })
+        .then((response) => {
+          setData(response.data)
+        })
+        .catch((error) => {
+          console.error('Error sending data:', error)
+        })
+    } catch (error) {
+      console.error('Error connecting to MetaMask:', error)
+    }
   }
   console.log(data)
 
@@ -96,17 +107,6 @@ const DashboardContextProvider = ({ children }) => {
     // updateWallet(initialState)
     window.location.replace('http://localhost:5173')
   }
-  console.log(initialState)
-
-  // function createPost() {
-  //   axios
-  //     .post('http://localhost:3005/users', {
-  //       address: address[0][0],
-  //     })
-  //     .then((response) => {
-  //       setData(response.data)
-  //     })
-  // }
 
   return (
     <DashboardContext.Provider
