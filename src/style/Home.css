@@ -65,23 +65,34 @@
   height: 100vh;
   margin: 10px;
 }
-.mainbar1::-webkit-scrollbar {
+.mainbar1::-webkit-scrollbar,
+.mainbar2::-webkit-scrollbar {
   display: none;
 }
 
 .mainbar2 {
   width: 40%;
-  /* overflow-y: auto; */
-  height: 100vh;
-  margin-top: 10px;
+  overflow-y: scroll;
+  height: 100%;
+  margin-top: -5.5rem;
   margin-left: 1%;
 }
 .mainbar2-card {
-  width: 90%;
+  width: 93.5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: white;
+  border-radius: 8px;
+}
+.mainbar2-details h5 {
+  margin: 0;
+}
+.trend-token {
+  margin-left: -1px !important;
+  font-weight: 500 !important;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /*token section*/
@@ -89,20 +100,28 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 20px;
 }
 .tokenCard-Ist {
   display: flex;
-  width: 55%;
-  justify-content: space-around;
+  width: 65%;
+  justify-content: space-between;
   align-items: center;
+}
+.token-dot {
+  margin-top: -7px;
 }
 .tokenCard-second {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 85%;
-  margin-top: -10px;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -7px;
+}
+.view-trend {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6821c3;
 }
 .tokenCard-second > small {
   font-size: x-small;
@@ -113,26 +132,37 @@
 
 /* market session */
 .mainbar-market {
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: white;
-  width: 90%;
+  border-radius: 8px;
+  width: 93.5%;
 }
-table {
-  width: 100%;
+.market-heading {
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
 }
-th {
-  font-weight: 300;
-  font-size: 13px;
+.market-section {
+  justify-content: space-between;
 }
-td > small {
-  font-size: 9px;
+.marketImgs {
+  width: 32px;
+  height: 32px;
 }
-td > span {
-  font-size: 15px;
+.topmarket-name {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  margin-top: -12px;
+  margin-left: 8px;
+  color: gray;
 }
-.tbody {
-  margin-bottom: 20px;
+.top-div {
+  margin-top: -12px;
 }
-button {
-  outline: none;
+.topmarket-img {
+  width: 18px;
+  height: 18px;
 }
+

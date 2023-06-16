@@ -2,32 +2,26 @@ import React from 'react'
 
 function Topmarket(props) {
   return (
-    <tbody className='tbody'>
-      <tr>
-        <td>
-          <span>{props.lovenumber}</span>
-        </td>
-        <td style={{ display: 'flex', marginLeft: '40%' }}>
-          <img
-            src={props.coinImg}
-            style={{ marginRight: '2px', width: '25%' }}
-          />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <small style={{ fontSize: '13px' }}>{props.name}</small>
-            <small style={{ marginTop: '-5px', fontSize: '11px' }}>
-              {props.initials}
-            </small>
-          </div>
-        </td>
-        <td>
-          <small style={{ fontSize: '13px' }}>{props.amount}</small>
-        </td>
-        <td>
-          <img src={props.arrow} style={{ width: '14%' }} />
-        </td>
-      </tr>
-      <div style={{ marginBottom: '20px' }}></div>
-    </tbody>
+    <section className='d-flex market-section mt-lg-1'>
+      <p>{props.lovenumber}</p>
+      <article>
+        <div className='d-flex top-div'>
+          <img src={props.coinImg} alt='' className='marketImgs mt-lg-2' />
+          <p className='mt-lg-1 ms-lg-1'>{props.name}</p>
+        </div>
+        <p className='topmarket-name text-center'>{props.initials}</p>
+      </article>
+      <p>{props.amount}</p>
+      <div className='d-flex'>
+        <img
+          src={props.arrow}
+          alt=''
+          style={{ width: '14%' }}
+          className='topmarket-img'
+        />
+        <p className='ms-lg-2'>{props.percentage}</p>
+      </div>
+    </section>
   )
 }
 

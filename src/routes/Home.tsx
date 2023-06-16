@@ -5,6 +5,7 @@ import avatar from '../assets/avatar.png'
 import graph from '../assets/graph.png'
 import picture from '../assets/picture.png'
 import video from '../assets/video.png'
+import { BsArrowRight } from 'react-icons/bs'
 import './Mainbar.css'
 import Card from '../components/Card'
 import data from '../components/data'
@@ -88,35 +89,28 @@ const Home = () => {
       <div className='home'>
         <div className='mainbar'>
           <div className='mainbar1 mt-lg-3'>{cards}</div>
-          <div className='mainbar2 border border-danger'>
+          <div className='mainbar2'>
             <div className='mainbar2-card'>
-              <div className='mainbar2-details'>
-                <h5 style={{ marginLeft: '6%' }}>Popular token</h5>
+              <div className='mainbar2-details p-lg-3'>
+                <h5 className='trend-token'>Trending token</h5>
                 {token}
-                <small>
-                  View trend
-                  <img
-                    src='./img/Vect.png'
-                    style={{ width: '3%', marginLeft: '5px' }}
-                  />
-                </small>
+                <article className='view-trend text-end'>
+                  <small>View trend</small>
+                  <BsArrowRight className='ms-lg-2' />
+                </article>
               </div>
             </div>
-            <div className='mainbar-market'>
-              <h5 style={{ fontWeight: 300 }}>Top market</h5>
-              <table>
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>NAME</th>
-                    <th>PRICE</th>
-                    <th>24H %</th>
-                  </tr>
-                </thead>
-                <div style={{ marginBottom: '15px' }}></div>
+            <div className='mainbar-market p-lg-3'>
+              <h5 className='trend-token'>Top market</h5>
+              <section className='mt-lg-3'>
+                <article className='d-flex market-heading'>
+                  <p>#</p>
+                  <p>NAME</p>
+                  <p>PRICE</p>
+                  <p>24H%</p>
+                </article>
                 {marketdata}
-                <div style={{ marginBottom: '15px' }}></div>
-              </table>
+              </section>
             </div>
           </div>
         </div>

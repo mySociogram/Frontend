@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     lineone: {
-      name: 'Descoin',
+      name: 'Parcoin',
       dot: '.',
       initials: 'DNC',
       graph:
@@ -18,7 +18,7 @@ export default [
   {
     id: 2,
     lineone: {
-      name: 'Devcoin',
+      name: 'Parcoin',
       dot: '.',
       initials: 'DVC',
       graph:
@@ -34,7 +34,7 @@ export default [
   {
     id: 3,
     lineone: {
-      name: 'Wecoim',
+      name: 'Wecoin',
       dot: '.',
       initials: 'WRC',
       graph:
