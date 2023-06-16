@@ -18,7 +18,7 @@ const ConnectWalletLayout = () => {
           </header>
           <main className='main-wallet mt-4 p-2 p-md-5'>
             <article className='text-center art-wallet'>
-              <h3>Sociogram</h3>
+              <h3>Socialmesh</h3>
               <p>Everything is about empowering communities to serve you </p>
             </article>
             <Outlet />

@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <header className='p-lg-5 nav-header d-flex'>
       <div>
-        <h3>Sociogram</h3>
+        <h3>Socialmesh</h3>
       </div>
       <main className='d-flex nav-firstMain'>
         <section className='nav-firstSection'>

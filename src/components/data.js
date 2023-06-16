@@ -29,7 +29,8 @@ export default [
     },
     flagImg:
       'https://res.cloudinary.com/sohmmie/image/upload/v1686835202/Vecto_5_vkh1sz.png',
-    menuButton: 'Vecto(4).png',
+    menuButton:
+      'https://res.cloudinary.com/sohmmie/image/upload/v1686837672/Vecto_4_xj7cpk.png',
   },
   {
     id: 2,
@@ -62,7 +63,8 @@ export default [
     },
     flagImg:
       'https://res.cloudinary.com/sohmmie/image/upload/v1686835202/Vecto_5_vkh1sz.png',
-    menuButton: 'Vecto(4).png',
+    menuButton:
+      'https://res.cloudinary.com/sohmmie/image/upload/v1686837672/Vecto_4_xj7cpk.png',
   },
   {
     id: 3,
@@ -94,6 +96,7 @@ export default [
     },
     flagImg:
       'https://res.cloudinary.com/sohmmie/image/upload/v1686835202/Vecto_5_vkh1sz.png',
-    menuButton: 'Vecto(4).png',
+    menuButton:
+      'https://res.cloudinary.com/sohmmie/image/upload/v1686837672/Vecto_4_xj7cpk.png',
   },
 ]

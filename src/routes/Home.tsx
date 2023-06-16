@@ -67,42 +67,45 @@ const Home = () => {
   })
 
   return (
-    <div className='home'>
-      <div className='mainbar'>
-        <div className='mainbar1'>{cards}</div>
-        <div className='mainbar2'>
-          <div className='mainbar2-card'>
-            <div className='mainbar2-details'>
-              <h5 style={{ marginLeft: '6%' }}>Popular token</h5>
-              {token}
-              <small>
-                View trend
-                <img
-                  src='./img/Vect.png'
-                  style={{ width: '3%', marginLeft: '5px' }}
-                />
-              </small>
+    <section>
+      <article>Hello world</article>
+      <div className='home mt-lg-3'>
+        <div className='mainbar'>
+          <div className='mainbar1'>{cards}</div>
+          <div className='mainbar2 border border-danger'>
+            <div className='mainbar2-card'>
+              <div className='mainbar2-details'>
+                <h5 style={{ marginLeft: '6%' }}>Popular token</h5>
+                {token}
+                <small>
+                  View trend
+                  <img
+                    src='./img/Vect.png'
+                    style={{ width: '3%', marginLeft: '5px' }}
+                  />
+                </small>
+              </div>
             </div>
-          </div>
-          <div className='mainbar-market'>
-            <h5 style={{ fontWeight: 300 }}>Top market</h5>
-            <table>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>NAME</th>
-                  <th>PRICE</th>
-                  <th>24H %</th>
-                </tr>
-              </thead>
-              <div style={{ marginBottom: '15px' }}></div>
-              {marketdata}
-              <div style={{ marginBottom: '15px' }}></div>
-            </table>
+            <div className='mainbar-market'>
+              <h5 style={{ fontWeight: 300 }}>Top market</h5>
+              <table>
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>NAME</th>
+                    <th>PRICE</th>
+                    <th>24H %</th>
+                  </tr>
+                </thead>
+                <div style={{ marginBottom: '15px' }}></div>
+                {marketdata}
+                <div style={{ marginBottom: '15px' }}></div>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

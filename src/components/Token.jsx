@@ -9,7 +9,7 @@ function Token(props) {
         <h6 style={{margin: 0}}>{props.name}</h6>
         <h4 style={{color: 'gray'}}>{props.dot}</h4>
         <small style={{color: 'gray', fontSize: '12px'}}>{props.initials}</small>
-        <img src={`./img/${props.graph}`}/>
+        <img src={props.graph}/>
         <h5 style={{color:'#6821C3', fontSize: '12px'}}>{props.percentage}</h5>
       </div>
       <div className='tokenCard-second'>

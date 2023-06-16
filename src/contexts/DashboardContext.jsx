@@ -19,7 +19,7 @@ const DashboardContextProvider = ({ children }) => {
   const [wallet, setWallet] = useState(initialState)
   const [loading, setLoading] = useState(true)
   const [key, setKey] = useState(false)
-  const [data, setData] = useState([])
+  const [data, setData] = useState('')
 
   //updateWallet function that sets your new wallet state when you connect.
   const updateWallet = async (accounts) => {
@@ -28,8 +28,6 @@ const DashboardContextProvider = ({ children }) => {
 
     if (accounts && accounts.length > 0) {
       setKey(true)
-    } else {
-      setKey(false)
     }
   }
   console.log(wallet)
@@ -80,7 +78,6 @@ const DashboardContextProvider = ({ children }) => {
       .then((response) => {
         setData(response.data)
       })
-    console.log(data)
     // fetch('http://localhost:3005/users', {
     //   method: 'POST',
     //   headers: {
@@ -99,6 +96,7 @@ const DashboardContextProvider = ({ children }) => {
     // updateWallet(initialState)
     window.location.replace('http://localhost:5173')
   }
+  console.log(initialState)
 
   // function createPost() {
   //   axios
