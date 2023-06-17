@@ -3,13 +3,15 @@ import '../style/ConnectWallet.css'
 import { Outlet } from 'react-router'
 import { Link } from 'react-router-dom'
 import { DashboardContext } from '../contexts/DashboardContext'
+import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const ConnectWalletLayout = () => {
   const { key } = useContext(DashboardContext)
+  const { isConnected } = useContext(ConnectWalletContext)
 
   return (
     <>
-      {key === true ? (
+      {isConnected ? (
         window.location.replace('http://localhost:5173/dashboard/home')
       ) : (
         <section className='p-4 p-md-5'>

@@ -17,11 +17,17 @@ import { MdMoreHoriz } from 'react-icons/md'
 import { Link, useLocation } from 'react-router-dom'
 import activity from '../assets/activity.png'
 import { DashboardContext } from '../contexts/DashboardContext'
+import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const SideBar = () => {
-  const { handleDisconnect } = useContext(DashboardContext)
+  // const { handleDisconnect } = useContext(DashboardContext)
+  const { disconnect } = useContext(ConnectWalletContext)
   const [show, setShow] = useState(false)
   const location = useLocation()
+  function handleDisconnect() {
+    disconnect()
+    window.location.replace('http://localhost:5173')
+  }
   return (
     <aside className='sidebar p-lg-5'>
       <section>

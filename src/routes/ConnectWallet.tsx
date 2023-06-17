@@ -8,11 +8,14 @@ import coin from '../assets/coin.png'
 import { BiSearchAlt2 } from 'react-icons/bi'
 import { zoomOut } from '../../helpers/gsapAnimations'
 import { DashboardContext } from '../contexts/DashboardContext'
+import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const ConnectWallet = () => {
   const cwRef = useRef(null)
   const { injectedProvider, isMetaMask, hasProvider, handleConnect, wallet } =
     useContext(DashboardContext)
+
+  const { connect } = useContext(ConnectWalletContext)
 
   useEffect(() => {
     zoomOut(cwRef)
@@ -26,15 +29,15 @@ const ConnectWallet = () => {
             <img src={info} alt='info icon' className='info-icon ms-2 mt-1' />
           </article>
           <section>
-            {window.ethereum?.isMetaMask && wallet.accounts.length < 1 && (
-              <article
-                className='d-flex select-wallet mt-lg-3'
-                onClick={handleConnect}
-              >
-                <img src={meta} alt='metamask icon' className='tok-icon' />
-                <p className='ms-2'>MetaMask Wallet</p>
-              </article>
-            )}
+            {/* {window.ethereum?.isMetaMask && wallet.accounts.length < 1 && ( */}
+            <article
+              className='d-flex select-wallet mt-lg-3'
+              onClick={() => connect()}
+            >
+              <img src={meta} alt='metamask icon' className='tok-icon' />
+              <p className='ms-2'>MetaMask Wallet</p>
+            </article>
+            {/* )} */}
 
             <article className='d-flex select-wallet'>
               <img

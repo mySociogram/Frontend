@@ -8,24 +8,23 @@ import { DashboardContext } from '../contexts/DashboardContext'
 
 const DashboardLayout = () => {
   const { loading } = useContext(DashboardContext)
-
-  return (
-    <div className='dash-layout'>
-      {loading === false && (
-        <Fragment>
-          <NavBar />
-          <section className='dashboard_layout'>
-            <main className='dashboard_layout-sidebar'>
-              <SideBar />
-            </main>
-            <main className='dashboard_layout-content'>
-              <Outlet />
-            </main>
-          </section>
-        </Fragment>
-      )}
-    </div>
-  )
+    return (
+      <div className='dash-layout'>
+        {loading === false && (
+          <Fragment>
+            <NavBar />
+            <section className='dashboard_layout'>
+              <main className='dashboard_layout-sidebar'>
+                <SideBar />
+              </main>
+              <main className='dashboard_layout-content'>
+                <Outlet />
+              </main>
+            </section>
+          </Fragment>
+        )}
+      </div>
+    )
 }
 
 export default DashboardLayout

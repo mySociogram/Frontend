@@ -4,9 +4,11 @@ import { RiArrowDropDownLine } from 'react-icons/ri'
 import avatar from '../assets/avatar.png'
 import '../style/NavBar.css'
 import { DashboardContext } from '../contexts/DashboardContext'
+import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const NavBar = () => {
   const { wallet, loading, address } = useContext(DashboardContext)
+  // const { address } = useContext(ConnectWalletContext)
 
   const prefixLength = 6
   const suffixLength = 4

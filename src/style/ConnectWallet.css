@@ -175,4 +175,7 @@
   .div-wallt {
     width: 75%;
   }
+  .select-wallet p:hover {
+    color: #6821c3;
+  }
 }
