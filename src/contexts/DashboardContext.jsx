@@ -65,20 +65,6 @@ const DashboardContextProvider = ({ children }) => {
     }
   }, [])
 
-  // const handleConnect = async () => {
-  //   let accounts = await window.ethereum.request({
-  //     method: 'eth_requestAccounts',
-  //   })
-  //   updateWallet(accounts)
-
-  //   axios
-  //     .post('http://localhost:3005/users', {
-  //       walletId: address[0][0],
-  //     })
-  //     .then((response) => {
-  //       setData(response.data)
-  //     })
-  // }
   const handleConnect = async () => {
     try {
       const accounts = await window.ethereum.request({
@@ -101,12 +87,6 @@ const DashboardContextProvider = ({ children }) => {
       console.error('Error connecting to MetaMask:', error)
     }
   }
-  console.log(data)
-
-  const handleDisconnect = async () => {
-    // updateWallet(initialState)
-    window.location.replace('http://localhost:5173')
-  }
 
   return (
     <DashboardContext.Provider
@@ -122,7 +102,6 @@ const DashboardContextProvider = ({ children }) => {
         data,
         setLoading,
         handleConnect,
-        handleDisconnect,
         setWallet,
       }}
     >

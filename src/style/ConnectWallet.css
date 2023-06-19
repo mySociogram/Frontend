@@ -1,3 +1,6 @@
+.connectWallet-Layout {
+  background: #ffffff;
+}
 .art-wallet h3 {
   font-weight: 600;
   font-size: 28px;
@@ -69,6 +72,15 @@
 }
 .search-icon {
   margin-top: 12px;
+  font-size: 25px;
+}
+.connect-input {
+  border: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 /* HOME Page */
@@ -175,7 +187,7 @@
   .div-wallt {
     width: 75%;
   }
-  .select-wallet p:hover {
+  .select-walletP:hover {
     color: #6821c3;
   }
 }

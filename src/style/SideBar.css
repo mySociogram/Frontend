@@ -24,6 +24,7 @@
   }
   .side-arrowIcon {
     font-size: 30px;
+    cursor: pointer;
   }
   .activity_grp-content {
     margin-left: 20px;

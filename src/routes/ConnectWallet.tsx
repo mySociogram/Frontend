@@ -35,7 +35,7 @@ const ConnectWallet = () => {
               onClick={() => connect()}
             >
               <img src={meta} alt='metamask icon' className='tok-icon' />
-              <p className='ms-2'>MetaMask Wallet</p>
+              <p className='ms-2 select-walletP'>MetaMask Wallet</p>
             </article>
             {/* )} */}
 
@@ -45,7 +45,7 @@ const ConnectWallet = () => {
                 alt='fantom icon'
                 className='tok-icon fantom-icon'
               />
-              <p className='ms-2'>Fantom Wallet</p>
+              <p className='ms-2 select-walletP'>Fantom Wallet</p>
             </article>
             <article className='d-flex select-wallet'>
               <img
@@ -53,20 +53,24 @@ const ConnectWallet = () => {
                 alt='trustwallet icon'
                 className='tok-icon trust-icon'
               />
-              <p className='ms-2'>Trust Wallet</p>
+              <p className='ms-2 select-walletP'>Trust Wallet</p>
             </article>
             <article className='d-flex select-wallet'>
               <img src={coin} alt='coin icon' className='tok-icon coin-icon' />
-              <p className='ms-2'>Coinbase Wallet</p>
+              <p className='ms-2 select-walletP'>Coinbase Wallet</p>
             </article>
           </section>
           <article className='select-wallet mt-4'>
             <p>Your preferred wallet not listed?</p>
             <article className='p-4'>
-              <div className='div-wallt d-flex text-center'>
-                <BiSearchAlt2 className='search-icon' />
-                <p className='mt-2 ms-1'>Search for preferred wallet</p>
-              </div>
+              <section className='div-wallt d-flex text-center'>
+                <BiSearchAlt2 className='search-icon ms-2' />
+                <input
+                  type='search'
+                  className='connect-input'
+                  placeholder='  Search for preferred wallet'
+                />
+              </section>
             </article>
           </article>
         </section>

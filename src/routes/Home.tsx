@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../style/Home.css'
 import '../components/Sidebar/Sidebar.css'
 import avatar from '../assets/avatar.png'

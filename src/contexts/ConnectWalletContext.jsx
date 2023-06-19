@@ -1,4 +1,5 @@
 import React, { useState, createContext, useEffect } from 'react'
+import axios from 'axios'
 
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
@@ -6,15 +7,41 @@ import { InjectedConnector } from 'wagmi/connectors/injected'
 export const ConnectWalletContext = createContext()
 
 const ConnectWalletContextProvider = ({ children }) => {
-  const { address, isConnected } = useAccount()
+  const [data, setData] = useState()
+  const { address, isConnected, account } = useAccount()
   const { connect } = useConnect({
     connector: new InjectedConnector(),
   })
   const { disconnect } = useDisconnect()
-  console.log(address)
+
+  useEffect(() => {
+    const sendUserData = async () => {
+      if (address) {
+        try {
+          const response = await axios.post('http://localhost:3005/users', {
+            walletId: address,
+          })
+          setData(response.data)
+        } catch (error) {
+          console.error('Error sending data:', error)
+        }
+      }
+    }
+
+    if (address) {
+      sendUserData()
+    }
+  }, [address])
+
   return (
     <ConnectWalletContext.Provider
-      value={{ address, isConnected, connect, disconnect }}
+      value={{
+        address,
+        isConnected,
+        account,
+        connect,
+        disconnect,
+      }}
     >
       {children}
     </ConnectWalletContext.Provider>

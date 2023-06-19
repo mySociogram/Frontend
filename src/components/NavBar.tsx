@@ -8,8 +8,6 @@ import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const NavBar = () => {
   const { wallet, loading, address } = useContext(DashboardContext)
-  // const { address } = useContext(ConnectWalletContext)
-
   const prefixLength = 6
   const suffixLength = 4
 
