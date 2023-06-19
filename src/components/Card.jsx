@@ -11,7 +11,7 @@ function Card(props) {
         <small>{props.username}</small>
         <p>{props.comment}</p>
         <img src={props.coverImg} style={{ width: '100%' }} />
-        <div className='actions-column'>
+        <div className='actions-column' style={{marginTop: props.coverImg === '' ? '-20px':''}}>
           <div className='dnc'>
             <small>{props.tokenName}</small>
             <img

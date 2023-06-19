@@ -51,11 +51,8 @@
     min-width: 190px;
     width: 100%;
     padding: 8px;
+    position: relative;
   }
-  /* .text-overflow {
-    border: 1px solid red;
-    text-overflow: ellipsis;
-  } */
   .nav-secondsec > p {
     margin-bottom: 0;
   }
@@ -66,5 +63,18 @@
   }
   .nav-arrow {
     font-size: 30px;
+    cursor: pointer;
+  }
+  .logout-sec {
+    border: 1px solid #8d8d8d;
+    position: absolute;
+    transform: translate(-12.4rem, 3.1rem);
+    width: 197px;
+    height: 50px;
+    cursor: pointer;
+    background: #ffffff;
+  }
+  .logout-sec > p {
+    margin-top: 10px;
   }
 }

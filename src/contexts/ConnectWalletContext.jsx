@@ -14,24 +14,40 @@ const ConnectWalletContextProvider = ({ children }) => {
   })
   const { disconnect } = useDisconnect()
 
+  const postAddress = () => {
+    axios
+      .post('http://localhost:3005/users', {
+        walletId: address,
+      })
+      .then((response) => {
+        setData(response.data)
+        window.alert(response.data)
+      })
+      .catch((error) => {
+        console.error('Error sending data:', error)
+      })
+  }
   useEffect(() => {
-    const sendUserData = async () => {
-      if (address) {
-        try {
-          const response = await axios.post('http://localhost:3005/users', {
-            walletId: address,
-          })
-          setData(response.data)
-        } catch (error) {
-          console.error('Error sending data:', error)
-        }
-      }
-    }
+    postAddress()
+  }, [])
+  // useEffect(() => {
+  //   const sendUserData = async () => {
+  //     if (address) {
+  //       try {
+  //         const response = await axios.post('http://localhost:3005/users', {
+  //           walletId: address,
+  //         })
+  //         setData(response.data)
+  //       } catch (error) {
+  //         console.error('Error sending data:', error)
+  //       }
+  //     }
+  //   }
 
-    if (address) {
-      sendUserData()
-    }
-  }, [address])
+  //   if (address) {
+  //     sendUserData()
+  //   }
+  // }, [address])
 
   return (
     <ConnectWalletContext.Provider
@@ -41,6 +57,7 @@ const ConnectWalletContextProvider = ({ children }) => {
         account,
         connect,
         disconnect,
+        postAddress,
       }}
     >
       {children}

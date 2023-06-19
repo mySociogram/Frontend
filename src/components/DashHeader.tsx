@@ -7,12 +7,15 @@ import Receive from './modal-contents/Receive'
 import Buy from './modal-contents/Buy'
 import Swap from './modal-contents/Swap'
 import SendFlow from './modal-contents/SendFlow'
+import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const DashHeader = () => {
   const [open, setOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [pop, setPop] = useState(false)
   const [popup, setPopup] = useState(false)
+  const { postAddress } = useContext(ConnectWalletContext)
+
   return (
     <header className='d-flex dash-header'>
       <article className='dash-titleIntro'>
@@ -73,7 +76,10 @@ const DashHeader = () => {
           <p className='ms-lg-4 dash-textt text-center'>Buy</p>
         </div>
         <div>
-          <div className='dashWallet-icons text-center ms-lg-4 mt-lg-3'>
+          <div
+            className='dashWallet-icons text-center ms-lg-4 mt-lg-3'
+            onClick={postAddress}
+          >
             <BsArrowDownLeft className='mt-lg-2' />
           </div>
           <p className='ms-lg-4 dash-textt text-center'>Loan</p>

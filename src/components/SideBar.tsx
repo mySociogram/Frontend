@@ -9,25 +9,18 @@ import {
 } from 'react-icons/bi'
 import { BsFillPeopleFill, BsGraphUp, BsCalendar4Event } from 'react-icons/bs'
 import { MdNotificationsNone } from 'react-icons/md'
-import { RiArrowDropUpLine, RiArrowDropDownLine } from 'react-icons/ri'
 import { ImFilm } from 'react-icons/im'
 import { FiMusic } from 'react-icons/fi'
 import { TbDeviceGamepad2 } from 'react-icons/tb'
 import { MdMoreHoriz } from 'react-icons/md'
 import { Link, useLocation } from 'react-router-dom'
+import { RiArrowDropUpLine, RiArrowDropDownLine } from 'react-icons/ri'
 import activity from '../assets/activity.png'
-import { DashboardContext } from '../contexts/DashboardContext'
 import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const SideBar = () => {
-  // const { handleDisconnect } = useContext(DashboardContext)
-  const { disconnect } = useContext(ConnectWalletContext)
   const [show, setShow] = useState(false)
   const location = useLocation()
-  function handleDisconnect() {
-    disconnect()
-    window.location.replace('http://localhost:5173')
-  }
   return (
     <aside className='sidebar p-lg-5'>
       <section>
@@ -225,16 +218,14 @@ const SideBar = () => {
                 <BiMicrophone
                   className='side-icons'
                   style={{
-                    color:
-                      location.pathname === '' ? '#6821C3' : 'black',
+                    color: location.pathname === '' ? '#6821C3' : 'black',
                   }}
                 />
                 <Link
                   to=''
                   className='Link-sideText ms-lg-2'
                   style={{
-                    color:
-                      location.pathname === '' ? '#6821C3' : 'black',
+                    color: location.pathname === '' ? '#6821C3' : 'black',
                   }}
                 >
                   <p>Podcast</p>
@@ -312,9 +303,6 @@ const SideBar = () => {
           ) : (
             ''
           )}
-        </section>
-        <section className='Link-sideText logoutText'>
-          <p onClick={handleDisconnect}>Logout</p>
         </section>
       </section>
     </aside>

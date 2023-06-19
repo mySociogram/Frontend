@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useState } from 'react'
 import { BiSearchAlt2 } from 'react-icons/bi'
-import { RiArrowDropDownLine } from 'react-icons/ri'
+import { RiArrowDropUpLine, RiArrowDropDownLine } from 'react-icons/ri'
 import avatar from '../assets/avatar.png'
 import '../style/NavBar.css'
 import { DashboardContext } from '../contexts/DashboardContext'
@@ -8,6 +8,14 @@ import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const NavBar = () => {
   const { wallet, loading, address } = useContext(DashboardContext)
+  const { disconnect } = useContext(ConnectWalletContext)
+
+  const [open, setOpen] = useState(false)
+
+  function handleDisconnect() {
+    disconnect()
+    window.location.replace('http://localhost:5173')
+  }
   const prefixLength = 6
   const suffixLength = 4
 
@@ -36,7 +44,31 @@ const NavBar = () => {
               )}
             </Fragment>
           )}
-          <RiArrowDropDownLine className='nav-arrow ' />
+          <div className='ms-lg-2'>
+            {open === false ? (
+              <RiArrowDropUpLine
+                className='nav-arrow'
+                onClick={() => setOpen(true)}
+              />
+            ) : (
+              <RiArrowDropDownLine
+                className='nav-arrow'
+                onClick={() => setOpen(!true)}
+              />
+            )}
+          </div>
+        </section>
+        <section>
+          {open ? (
+            <section
+              className='logout-sec text-center'
+              onClick={handleDisconnect}
+            >
+              <p>Logout</p>
+            </section>
+          ) : (
+            ''
+          )}
         </section>
       </main>
     </header>
