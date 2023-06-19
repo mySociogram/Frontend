@@ -11,7 +11,9 @@ import ModalTest from './routes/ModalTest'
 import DashboardWallet from './routes/DashboardWallet'
 import Community from './routes/Community'
 import DashWallet from './routes/DashWallet'
-
+import Message from './routes/Message'
+import Notification from './routes/Notification'
+import Market from './routes/Market'
 
 const router = createBrowserRouter([
   {
@@ -47,6 +49,18 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/dashWallet',
         element: <DashWallet />,
+      },
+      {
+        path: '/dashboard/message',
+        element: <Message />,
+      },
+      {
+        path: '/dashboard/notification',
+        element: <Notification />,
+      },
+      {
+        path: '/dashboard/market',
+        element: <Market />,
       },
     ],
   },
