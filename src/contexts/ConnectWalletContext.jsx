@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect } from 'react'
+import React, { useState, createContext, useEffect, useContext } from 'react'
 import axios from 'axios'
 
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
@@ -15,39 +15,47 @@ const ConnectWalletContextProvider = ({ children }) => {
   const { disconnect } = useDisconnect()
 
   const postAddress = () => {
-    axios
-      .post('http://localhost:3005/users', {
-        walletId: address,
+    const user = {
+      walletId: address,
+    }
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }
+    fetch('http://localhost:3005/users', options)
+      .then((data) => {
+        if (!data.ok) {
+          throw Error(data.status)
+        }
+        return data.json()
       })
-      .then((response) => {
-        setData(response.data)
-        window.alert(response.data)
+      .then((user) => {
+        console.log(user)
       })
-      .catch((error) => {
-        console.error('Error sending data:', error)
+      .catch((e) => {
+        console.log(e)
       })
   }
-  useEffect(() => {
-    postAddress()
-  }, [])
-  // useEffect(() => {
-  //   const sendUserData = async () => {
-  //     if (address) {
-  //       try {
-  //         const response = await axios.post('http://localhost:3005/users', {
-  //           walletId: address,
-  //         })
-  //         setData(response.data)
-  //       } catch (error) {
-  //         console.error('Error sending data:', error)
-  //       }
-  //     }
-  //   }
 
-  //   if (address) {
-  //     sendUserData()
-  //   }
-  // }, [address])
+  // const postAddress = () => {
+  //   axios
+  //     .post('http://localhost:3005/users', {
+  //       walletId: address,
+  //     })
+  //     .then((response) => {
+  //       setData(response.data)
+  //       window.alert(response.data)
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error sending data:', error)
+  //     })
+  // }
+  // useEffect(() => {
+  //   postAddress()
+  // }, [])
 
   return (
     <ConnectWalletContext.Provider
