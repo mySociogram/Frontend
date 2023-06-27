@@ -32,10 +32,10 @@ TITA which is coined from the following words; T[Transparent], I[Inclusive], T[T
 
 ## Want to contribute to the Socialmesh Platform?
 - Fork the repository.
-- Changes should be made and a pull request should be opened.
-- Alternatively, you can open an issue and we will respond as soon as possible.
+- Changes should be made, and a pull request should be opened.
+- Alternatively, you can open an issue, and we will respond as soon as possible.
 
 ## MEET THE FRONTEND TEAM 
 - Chukwuma Chisom - Team Lead
-- Oluwafunmike Akinsanmi - Quality Assurance Analyst
-- Chukwuma Chisom - Frontend Developer
+- Hannah Adora 
+- Ifeoma
