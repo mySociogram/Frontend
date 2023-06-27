@@ -14,6 +14,7 @@ import DashWallet from './routes/DashWallet'
 import Message from './routes/Message'
 import Notification from './routes/Notification'
 import Market from './routes/Market'
+import DevCommunity from './routes/DevCommunity'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/community',
         element: <Community />,
+      },
+      {
+        path: '/dashboard/devCommunity',
+        element: <DevCommunity />,
       },
       {
         path: '/dashboard/dashboardWallet',

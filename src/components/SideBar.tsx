@@ -20,6 +20,7 @@ import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const SideBar = () => {
   const [show, setShow] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
   return (
     <aside className='sidebar p-lg-5'>
@@ -65,7 +66,64 @@ const SideBar = () => {
           >
             <p>Community</p>
           </Link>
+          <div className='ms-lg-2 arrowdropup'>
+            {isOpen === false ? (
+              <RiArrowDropUpLine
+                className='side-arrowIcon'
+                onClick={() => setIsOpen(true)}
+              />
+            ) : (
+              <RiArrowDropDownLine
+                className='side-arrowIcon'
+                onClick={() => setIsOpen(!true)}
+              />
+            )}
+          </div>
         </div>
+        <section className='mt-lg-2 activity_grp-content'>
+          {isOpen ? (
+            <section>
+              <div className='d-flex'>
+                <Link
+                  to=''
+                  className='Link-sideText ms-lg-2'
+                  style={{
+                    color: location.pathname === '' ? '#6821C3' : 'black',
+                  }}
+                >
+                  <p>Clown</p>
+                </Link>
+              </div>
+              <div className='d-flex mt-lg-2'>
+                <Link
+                  to=''
+                  className='Link-sideText ms-lg-2'
+                  style={{
+                    color: location.pathname === '' ? '#6821C3' : 'black',
+                  }}
+                >
+                  <p>Design</p>
+                </Link>
+              </div>
+              <div className='d-flex mt-lg-2'>
+                <Link
+                  to='/dashboard/devCommunity'
+                  className='Link-sideText ms-lg-2'
+                  style={{
+                    color:
+                      location.pathname === '/dashboard/devCommunity'
+                        ? '#6821C3'
+                        : 'black',
+                  }}
+                >
+                  <p>Developer</p>
+                </Link>
+              </div>
+            </section>
+          ) : (
+            ''
+          )}
+        </section>
         <div className='d-flex mt-lg-2'>
           <BiWallet
             className='side-icons'
