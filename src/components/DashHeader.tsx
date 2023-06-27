@@ -8,23 +8,52 @@ import Buy from './modal-contents/Buy'
 import Swap from './modal-contents/Swap'
 import SendFlow from './modal-contents/SendFlow'
 import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
+import { DashboardContext } from '../contexts/DashboardContext'
 
 const DashHeader = () => {
   const [open, setOpen] = useState(false)
   const [show, setShow] = useState(false)
   const [pop, setPop] = useState(false)
   const [popup, setPopup] = useState(false)
-  const { postAddress } = useContext(ConnectWalletContext)
+  const { address } = useContext(DashboardContext)
+  // const { postAddress } = useContext(ConnectWalletContext)
+  console.log(address[0][0])
 
+  const postAddress = () => {
+    const user = {
+      walletId: address[0][0],
+    }
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    }
+    fetch('http://localhost:3005/users', options)
+      .then((data) => {
+        if (!data.ok) {
+          throw Error(data.status)
+        }
+        return data.json()
+      })
+      .then((user) => {
+        console.log(user)
+      })
+      .catch((e) => {
+        window.alert(e)
+        console.log(e)
+      })
+  }
   return (
     <header className='d-flex dash-header'>
       <article className='dash-titleIntro'>
         <h3>Hi Blitz!</h3>
-        <p>Nothing to see here.</p>
-        {/* <p>
+        {/* <p>Nothing to see here.</p> */}
+        <p>
           Your <span>Portfolio</span> has gone up <span>5%</span> since your
           last visit.
-        </p> */}
+        </p>
       </article>
       <article className='d-flex'>
         <div>
