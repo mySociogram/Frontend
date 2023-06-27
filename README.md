@@ -2,7 +2,7 @@
 
 # OVERVIEW
 
-Socialmesh is a SocialFi built for communities. Members are rewarded with tokens for their contributions in the community and tokens earned are use to run services(e.g ads) within the community.
+Socialmesh is a SocialFi built for communities. Members are rewarded with tokens for their contributions to the community, and the tokens earned are used to run services within the community.
 
 ## Socialmesh Features
 - Connect Wallet
@@ -20,7 +20,7 @@ Socialmesh is a SocialFi built for communities. Members are rewarded with tokens
 - Figma:-Figma is an online user interface (UI) tool for designing, collaborating, and prototyping.
 
 ## Socialmesh Links
-- Twitter: [https://twitter.com/titaglobal?s=21&t=OzwvTeMmjbSZx8GSMKMZ8wFigma](https://twitter.com/socialmesh_?t=xXPIcpmtaPV77dmyh6RjOg&s=08)
+- Twitter: [https://twitter.com/socialmesh_?t=xXPIcpmtaPV77dmyh6RjOg&s=08]
   
 ## Socialmesh Procedure for Installation/Deployment.
 - git clone
