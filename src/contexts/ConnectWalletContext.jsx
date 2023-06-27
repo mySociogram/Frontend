@@ -8,15 +8,27 @@ export const ConnectWalletContext = createContext()
 
 const ConnectWalletContextProvider = ({ children }) => {
   const [data, setData] = useState()
+  const [walletAddress, setWalletAddress] = useState('')
   const { address, isConnected, account } = useAccount()
   const { connect } = useConnect({
     connector: new InjectedConnector(),
   })
   const { disconnect } = useDisconnect()
+useEffect(() => {
+    let walletAddress
+    const addressFromStorage = localStorage.getItem("address");
+    if (addressFromStorage) {
+      walletAddress = JSON.parse(addressFromStorage)
+      setWalletAddress(walletAddress)
+    }
+postAddress()
+  }, [walletAddress])
+
+      console.log(walletAddress, "address")
 
   const postAddress = () => {
     const user = {
-      walletId: address,
+      walletId: walletAddress,
     }
     const options = {
       method: 'POST',
@@ -54,9 +66,7 @@ const ConnectWalletContextProvider = ({ children }) => {
   //       console.error('Error sending data:', error)
   //     })
   // }
-  // useEffect(() => {
-  //   postAddress()
-  // }, [])
+  
 
   return (
     <ConnectWalletContext.Provider

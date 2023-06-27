@@ -34,8 +34,11 @@ const DashboardContextProvider = ({ children }) => {
 
   //convert the object into an array
   const address = Object.keys(wallet).map((key) => wallet[key])
-  console.log(address[0][0])
+  console.log(address[0][0], "index")
+  if(address[0][0]){
+    localStorage.setItem('address', JSON.stringify(address[0][0]))
 
+  }
   useEffect(() => {
     const refreshAccounts = (accounts) => {
       if (accounts.length > 0) {
