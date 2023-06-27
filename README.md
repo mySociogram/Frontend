@@ -37,5 +37,5 @@ TITA which is coined from the following words; T[Transparent], I[Inclusive], T[T
 
 ## MEET THE FRONTEND TEAM 
 - Chukwuma Chisom - Team Lead
-- Oluwafunmike Akinsanmi - Quality Assurance Analyst
-- Chukwuma Chisom - Frontend Developer
+- Hannah Adora
+- Ifeoma
