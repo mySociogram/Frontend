@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import '../style/ConnectWallet.css'
 import { Outlet } from 'react-router'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { DashboardContext } from '../contexts/DashboardContext'
 import { ConnectWalletContext } from '../contexts/ConnectWalletContext'
 
 const ConnectWalletLayout = () => {
   const { isConnected } = useContext(ConnectWalletContext)
+  const location = useLocation()
   // const { key } = useContext(DashboardContext)
 
   return (
@@ -27,7 +28,6 @@ const ConnectWalletLayout = () => {
               <Outlet />
             </main>
           </section>
-
         )}
       </>
     </section>
