@@ -13,7 +13,7 @@ const ConnectWalletLayout = () => {
     <section className='connectWallet-Layout'>
       <>
         {isConnected ? (
-          window.location.replace('http://localhost:5173/dashboard/home')
+          window.location.replace('/dashboard/home')
         ) : (
           <section className='p-4 p-md-5'>
             <header className='text-uppercase'>
@@ -27,6 +27,7 @@ const ConnectWalletLayout = () => {
               <Outlet />
             </main>
           </section>
+
         )}
       </>
     </section>
