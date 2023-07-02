@@ -15,6 +15,7 @@ import Message from './routes/Message'
 import Notification from './routes/Notification'
 import Market from './routes/Market'
 import DevCommunity from './routes/DevCommunity'
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {

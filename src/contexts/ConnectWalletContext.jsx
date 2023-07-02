@@ -1,58 +1,61 @@
-import React, { useState, createContext, useEffect, useContext } from 'react'
-import axios from 'axios'
+import React, { useState, createContext, useEffect, useContext } from "react";
+import axios from "axios";
 
-import { useAccount, useConnect, useDisconnect } from 'wagmi'
-import { InjectedConnector } from 'wagmi/connectors/injected'
+import { useAccount, useConnect, useDisconnect } from "wagmi";
+import { InjectedConnector } from "wagmi/connectors/injected";
 
-export const ConnectWalletContext = createContext()
+export const ConnectWalletContext = createContext();
 
 const ConnectWalletContextProvider = ({ children }) => {
-  const [data, setData] = useState()
-  const [walletAddress, setWalletAddress] = useState('')
-  const { address, isConnected, account } = useAccount()
+  const [data, setData] = useState();
+  const [walletAddress, setWalletAddress] = useState("");
+  const { address, isConnected, account } = useAccount();
   const { connect } = useConnect({
     connector: new InjectedConnector(),
-  })
-  const { disconnect } = useDisconnect()
-useEffect(() => {
-    let walletAddress
+  });
+  const { disconnect } = useDisconnect();
+  useEffect(() => {
+    let walletAddress;
     const addressFromStorage = localStorage.getItem("address");
     if (addressFromStorage) {
-      walletAddress = JSON.parse(addressFromStorage)
-      setWalletAddress(walletAddress)
+      walletAddress = JSON.parse(addressFromStorage);
+      setWalletAddress(walletAddress);
     }
-postAddress()
-  }, [walletAddress])
+    postAddress();
+  }, [walletAddress]);
 
-      console.log(walletAddress, "address")
+  console.log(walletAddress, "address");
 
   const postAddress = () => {
+    if (!walletAddress) {
+      return;
+    }
     const user = {
       walletId: walletAddress,
-    }
+    };
     const options = {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(user),
-    }
-    fetch('http://localhost:3005/users', options)
+    };
+    fetch("http://localhost:3005/users", options)
       .then((data) => {
         if (!data.ok) {
-          throw Error(data.status)
+          throw Error(data.status);
         }
-        return data.json()
+        return data.json();
       })
       .then((user) => {
-        console.log(user)
+        document.cookie = user.token;
+        console.log(user);
       })
       .catch((e) => {
-        window.alert(e)
-        console.log(e)
-      })
-  }
-
+        // window.alert(e);
+        console.log(e);
+      });
+  };
   // const postAddress = async () => {
   //   await axios
   //     .post('http://localhost:3005/users', {
@@ -66,7 +69,6 @@ postAddress()
   //       console.error('Error sending data:', error)
   //     })
   // }
-  
 
   return (
     <ConnectWalletContext.Provider
@@ -81,7 +83,7 @@ postAddress()
     >
       {children}
     </ConnectWalletContext.Provider>
-  )
-}
+  );
+};
 
-export default ConnectWalletContextProvider
+export default ConnectWalletContextProvider;
