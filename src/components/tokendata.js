@@ -2,15 +2,15 @@ export default [
   {
     id: 1,
     lineone: {
-      name: 'Parcoin',
+      name: 'FoundersToken',
       dot: '.',
-      initials: 'DNC',
+      initials: 'FTN',
       graph:
         'https://res.cloudinary.com/sohmmie/image/upload/v1686835202/graph_j6hi2a.png',
       percentage: '+27.4%',
     },
     linetwo: {
-      available: '997,643,520.7609  available',
+      available: '1000000000 Supply',
       dot: '.',
       circulation: '2356479.2391  in circulation',
     },
@@ -18,15 +18,15 @@ export default [
   {
     id: 2,
     lineone: {
-      name: 'Parcoin',
+      name: 'DevToken',
       dot: '.',
-      initials: 'DVC',
+      initials: 'DETN',
       graph:
         'https://res.cloudinary.com/sohmmie/image/upload/v1686835202/graph_j6hi2a.png',
       percentage: '+27.4%',
     },
     linetwo: {
-      available: '997,643,520.7609  available',
+      available: '1000000000 Supply',
       dot: '.',
       circulation: '2356479.2391  in circulation',
     },
@@ -34,15 +34,15 @@ export default [
   {
     id: 3,
     lineone: {
-      name: 'Wecoin',
+      name: 'DesgToken',
       dot: '.',
-      initials: 'WRC',
+      initials: 'DSTN',
       graph:
         'https://res.cloudinary.com/sohmmie/image/upload/v1686835202/graph_j6hi2a.png',
       percentage: '+27.4%',
     },
     linetwo: {
-      available: '997,643,520.7609  available',
+      available: '1000000000 Supply',
       dot: '.',
       circulation: '2356479.2391  in circulation',
     },
