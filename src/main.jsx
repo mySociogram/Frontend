@@ -7,6 +7,7 @@ import ConnectWalletContextProvider from './contexts/ConnectWalletContext.jsx'
 
 import { WagmiConfig, createConfig, mainnet } from 'wagmi'
 import { createPublicClient, http } from 'viem'
+import ContractContextProvider from './contexts/ContractContext.jsx'
 
 const config = createConfig({
   autoConnect: true,
@@ -20,9 +21,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <WagmiConfig config={config}>
     <ConnectWalletContextProvider>
       <DashboardContextProvider>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <ContractContextProvider>
+          <React.StrictMode>
+            <App />
+          </React.StrictMode>
+        </ContractContextProvider>
       </DashboardContextProvider>
     </ConnectWalletContextProvider>
   </WagmiConfig>
