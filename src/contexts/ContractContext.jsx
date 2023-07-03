@@ -77,13 +77,37 @@ const ContractContextProvider = ({ children }) =>{
 
     }
 
+    const getDevToken = async () => {
+        const devTokenContract = await getDevTokenContract();
+
+        const devTokenContractName = await devTokenContract.name(
+            {
+                gasLimit: '0x7EF40'
+            }
+        );
+
+        const devTokenContractSym = await devTokenContract.symbol(
+            {
+                gasLimit: '0x7EF40'
+            }
+        );
+
+        // await devTokenContractName.wait();
+        console.log("Name", devTokenContractName);
+        console.log("Symbol", devTokenContractSym);
+
+        return [devTokenContractName, devTokenContractSym];
+
+    }
+
      
 
     return (
         <ContractContext.Provider
           value={{
             registerUser,
-            shareToken
+            shareToken,
+            getDevToken
           }}
         >
           {children}
