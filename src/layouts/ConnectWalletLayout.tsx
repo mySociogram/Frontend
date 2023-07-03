@@ -17,9 +17,9 @@ const ConnectWalletLayout = () => {
           window.location.replace('/dashboard/home')
         ) : (
           <section className='p-4 p-md-5'>
-            {/* <header className='text-uppercase'>
+            <header className='text-uppercase'>
               <p>logo</p>
-            </header> */}
+            </header>
             <main className='main-wallet mt-4 p-2 p-md-5'>
               <article className='text-center art-wallet'>
                 <h3>Socialmesh</h3>
