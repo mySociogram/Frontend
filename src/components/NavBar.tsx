@@ -14,7 +14,7 @@ const NavBar = () => {
 
   function handleDisconnect() {
     disconnect()
-    window.location.replace('http://localhost:5173')
+    window.location.replace('/')
   }
   const prefixLength = 6
   const suffixLength = 4

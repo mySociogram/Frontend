@@ -15,36 +15,9 @@ const DashHeader = () => {
   const [show, setShow] = useState(false)
   const [pop, setPop] = useState(false)
   const [popup, setPopup] = useState(false)
-  const { address } = useContext(DashboardContext)
-  // const { postAddress } = useContext(ConnectWalletContext)
-  console.log(address[0][0])
+  // const { address } = useContext(DashboardContext)
+  const { postAddress } = useContext(ConnectWalletContext)
 
-  const postAddress = () => {
-    const user = {
-      walletId: address[0][0],
-    }
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user),
-    }
-    fetch('http://localhost:3005/users', options)
-      .then((data) => {
-        if (!data.ok) {
-          throw Error(data.status)
-        }
-        return data.json()
-      })
-      .then((user) => {
-        console.log(user)
-      })
-      .catch((e) => {
-        window.alert(e)
-        console.log(e)
-      })
-  }
   return (
     <header className='d-flex dash-header'>
       <article className='dash-titleIntro'>
